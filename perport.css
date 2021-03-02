@@ -1,0 +1,62 @@
+/* 01 Mar 2021
+Personal Portfolio
+Composer: brndn */
+
+#coffee {
+    height: 100vh;
+    margin-top: -0.5em;
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+}
+
+header {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0em;
+    padding: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2em;
+    width: 100vw;
+}
+
+h1 {
+    margin: 0em;
+    color: antiquewhite;
+}
+
+h1 span {
+    display: inline-flex;
+}
+
+h1 span:nth-child(even) {
+    overflow: hidden;
+    transition: ease-in-out 0.5s;
+    letter-spacing: -1em;
+}
+
+h1:hover span:nth-child(even) {
+    font-size: 0.5em;
+    letter-spacing: 0em;
+}
+
+#self {
+    position: absolute;
+    height: 10em;
+    bottom: -10em;
+    transform: translateY(-10em);
+    transition: transform 2s ease-in-out;
+    transition-delay: 4s;
+}
+
+
+@media (min-width: 768px) {
+
+    #coffee {
+        width: 100vw;
+    }
+}
