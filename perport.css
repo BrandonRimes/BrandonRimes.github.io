@@ -2,7 +2,14 @@
 Personal Portfolio
 Composer: brndn */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 #coffee {
+    display: none;
     height: 100vh;
     margin-top: -0.5em;
     left: 50%;
@@ -10,38 +17,98 @@ Composer: brndn */
     position: fixed;
 }
 
+body {
+    height: 100vh;
+    background: url("coffee-zoom.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 header {
-    position: fixed;
+    /* position: fixed;
     left: 50%;
     transform: translate(-50%);
-    margin: 0em;
+    margin: 0em; */
+    margin-top: 1em;
     padding: 0em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family:'Times New Roman', Times, serif;
-    font-size: 2em;
     width: 100vw;
 }
 
-h1 {
+header h1 {
     margin: 0em;
+    font-size: 3em;
     color: antiquewhite;
 }
 
 h1 span {
     display: inline-flex;
+    letter-spacing: 0em;
 }
 
 h1 span:nth-child(even) {
     overflow: hidden;
-    transition: ease-in-out 0.5s;
     letter-spacing: -1em;
+    transition: ease-in-out 0.5s;
 }
 
 h1:hover span:nth-child(even) {
-    font-size: 0.5em;
+    font-size: 0.75em;
     letter-spacing: 0em;
+    transition: ease-in-out 0.5s;
+}
+
+.scene {
+    left: 25em;
+    top: 10em;
+    width: 210px;
+    height: 140px;
+    position: relative;
+    perspective: 1000px;
+    color: antiquewhite;
+}
+  
+.carousel {
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    transform: translateZ(25em);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.caroucell {
+    position: absolute;
+    width: 190px;
+    height: 120px;
+    left: 10px;
+    top: 10px;
+    border: 2px solid antiquewhite;
+    line-height: 116px;
+    font-size: 80px;
+    font-weight: bold;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.caroucell:nth-child(1) {
+    transform: rotateY(0deg) translateZ(145px);
+}
+.caroucell:nth-child(2) {
+    transform: rotateY(72deg) translateZ(145px);
+}
+.caroucell:nth-child(3) {
+    transform: rotateY(144deg) translateZ(145px);
+}
+.caroucell:nth-child(4) {
+    transform: rotateY(216deg) translateZ(145px);
+}
+.caroucell:nth-child(5) {
+    transform: rotateY(288deg) translateZ(145px);
 }
 
 #self {
@@ -52,7 +119,6 @@ h1:hover span:nth-child(even) {
     transition: transform 2s ease-in-out;
     transition-delay: 4s;
 }
-
 
 @media (min-width: 768px) {
 
