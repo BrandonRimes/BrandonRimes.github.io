@@ -98,7 +98,7 @@ body {
 #bs-left {
     width: 10rem;
     height: 100%;
-    left: 0;
+    left: 1rem;
     transform: translateZ(-20px) translateX(-50%) rotateY(90deg);
     box-shadow: inset -1rem 0rem 5rem;
 }
@@ -106,21 +106,21 @@ body {
 #bs-left-face {
     width: 1rem;
     height: 100%;
-    left: 0;
+    left: 0rem;
     transform: translateZ(60px);
 }
 
 #bs-right {
     width: 10rem;
     height: 100%;
-    right: 0;
+    right: 0rem;
     transform: translateZ(-20px) translateX(50%) rotateY(90deg);
 }
 
 #bs-right-face {
     width: 1rem;
     height: 100%;
-    right: 0;
+    right: 0rem;
     transform: translateZ(60px);
 }
 /* bookshelf shelves ---------------------------- */
@@ -306,7 +306,7 @@ h1:hover span:nth-child(even) {
 }
 
 
-/* responsive --------------------------------- */
+/* responsive 768px --------------------------- */
 @media (min-width: 768px) {
     
     #back-wall {
@@ -358,7 +358,7 @@ h1:hover span:nth-child(even) {
     }
 
 }
-
+/* responsive 1024px ----------------------------- */
 @media (min-width: 1024px) {
     
 }
