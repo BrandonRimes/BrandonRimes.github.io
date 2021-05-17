@@ -8,41 +8,217 @@ Composer: brndn */
   box-sizing: border-box;
 }
 
-/* #coffee {
-    display: none;
-    height: 100vh;
-    margin-top: -0.5em;
-    left: 50%;
-    transform: translate(-50%);
-    position: fixed;
-} */
-
 body {
     height: 100vh;
-    background: url("coffee-zoom.gif");
+    /* background: url("coffee-zoom.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     font-family: averia serif libre;
 }
 
-header {
-    /* position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-    margin: 0em; */
-    margin-top: 1em;
-    padding: 0em;
+#scene {
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px
+}
+/* room ----------------------------------- */
+#room {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(100px);
+}
+
+.surfaces {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0rem 0rem 10rem;
+}
+
+#back-wall {
+    background-image: url("back-wall.jpg");
+    transform: translateZ(-500px) translateY(-15%);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
 }
 
-header h1 {
+#floor {
+    background-image: url("wood-floor2.jpg");
+    transform: translateZ(-117px) translateY(35%) rotateX(90deg);
+}
+
+#left-wall {
+    background-image: url("wall-texture.jpg");
+    transform: translateZ(-300px) translateX(-50%) translateY(-15%) rotateY(90deg);
+}
+
+#right-wall {
+    background-image: url("wall-texture.jpg");
+    transform: translateZ(-300px) translateX(50%) translateY(-15%) rotateY(-90deg);
+}
+
+#ceiling {
+    background-image: url("wall-texture.jpg");
+    transform: translateZ(-145px) translateY(-65%) rotateX(-90deg);
+}
+/* bookshelf ------------------------------------- */
+#bookshelf {
+    width: 25vw;
+    height: 66vh;
+    position: absolute;
+    bottom: 7.2rem;
+    transform-style: preserve-3d;
+    transform: translateZ(-375px);
+    box-shadow: inset 0rem 0rem 10rem white;
+}
+
+#bookshelf:hover {
+    box-shadow: 1rem -3rem 10rem white;
+}
+
+.bookshelf {
+    position: absolute;
+    border: 1px solid #66493c;
+    transform-style: preserve-3d;
+    background-image: url("bookshelf-texture.jpg");
+    background-position: center;
+    background-size: cover;
+}
+/* bookshelf sides -------------------------- */
+#bs-left {
+    width: 10rem;
+    height: 100%;
+    left: 0;
+    transform: translateZ(-20px) translateX(-50%) rotateY(90deg);
+    box-shadow: inset -1rem 0rem 5rem;
+}
+
+#bs-left-face {
+    width: 1rem;
+    height: 100%;
+    left: 0;
+    transform: translateZ(60px);
+}
+
+#bs-right {
+    width: 10rem;
+    height: 100%;
+    right: 0;
+    transform: translateZ(-20px) translateX(50%) rotateY(90deg);
+}
+
+#bs-right-face {
+    width: 1rem;
+    height: 100%;
+    right: 0;
+    transform: translateZ(60px);
+}
+/* bookshelf shelves ---------------------------- */
+#bs-shelf1 {
+    width: 100%;
+    height: 10rem;
+    top: 15vh;
+    transform: translateZ(-20px) translateY(-50%) rotateX(90deg);
+    box-shadow: inset 0rem 1rem 10rem;
+}
+
+#bs-shelf1-under {
+    width: 100%;
+    height: 10rem;
+    top: 17vh;
+    transform: translateZ(-20px) translateY(-50%) rotateX(90deg);
+    box-shadow: inset 0rem 1rem 10rem;
+}
+
+#bs-shelf1-face {
+    width: 100%;
+    height: 1rem;
+    top: 15vh;
+    transform: translateZ(60px);
+    z-index: -1;
+}
+
+#bs-shelf2 {
+    width: 100%;
+    height: 10rem;
+    top: 33vh;
+    transform: translateZ(-20px) translateY(-50%) rotateX(90deg);
+}
+
+#bs-shelf2-face {
+    width: 100%;
+    height: 1rem;
+    top: 33vh;
+    transform: translateZ(60px);
+    z-index: -1;
+}
+
+#bs-shelf3 {
+    width: 100%;
+    height: 10rem;
+    top: 50vh;
+    transform: translateZ(-20px) translateY(-50%) rotateX(90deg);
+    box-shadow: inset 0rem 1rem 3rem;
+}
+
+#bs-shelf3-face {
+    width: 100%;
+    height: 1rem;
+    top: 50vh;
+    transform: translateZ(60px);
+    z-index: -1;
+}
+
+#bs-top {
+    width: 100%;
+    height: 10rem;
+    top: -4rem;
+    transform: translateZ(-20px) rotateX(90deg);
+    box-shadow: inset 0rem 1rem 10rem;
+}
+
+#bs-top-face {
+    width: 100%;
+    height: 1rem;
+    top: 0rem;
+    transform: translateZ(61px);
+}
+
+#bs-bottom {
+    width: 100%;
+    height: 10rem;
+    bottom: -4rem;
+    transform: translateZ(-20px) rotateX(90deg);
+    box-shadow: inset 0rem 1rem 3rem;
+}
+
+#bs-bottom-face {
+    width: 100%;
+    height: 1rem;
+    bottom: 0rem;
+    transform: translateZ(60px);
+}
+/* bookshelf back -------------------------------- */
+#bs-back {
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-100px);
+    box-shadow: inset 0rem 0rem 10rem;
+}
+/* logo ---------------------------------------------- */
+h1 {
     margin: 0em;
-    font-size: 3em;
-    color: antiquewhite;
+    font-size: 5rem;
+    color: blanchedalmond;
+    text-shadow: 0rem 0rem 10px black;
 }
 
 h1 span {
@@ -61,112 +237,66 @@ h1:hover span:nth-child(even) {
     letter-spacing: 0em;
     transition: ease-in-out 0.5s;
 }
-
-main {
-    height: 57vh;
-}
-
-#filler {
-    display: flex;
-    flex-direction: column;
-    color: antiquewhite;
-}
-
-#filler {
-    display: flex;
-    flex-direction: column;
-    color: antiquewhite;
-}
-
-#filler h3 {
-    margin: 0em;
-}
-
-#filler h4 {
-    margin: 0em 0.25em;
-}
-
-#filler hr {
-    width: 100%;
-}
-
-#filler p {
-    margin: 0.25em 1em;
-}
-
+/* contact --------------------------------------- */
 #self {
-    position: absolute;
-    height: 10em;
-    bottom: -10em;
-    transform: translateY(-10em);
-    transition: transform 2s ease-in-out;
-    transition-delay: 4s;
+    position: fixed;
+    height: 15rem;
+    z-index: 2;
+    right: 1rem;
+    bottom: 0rem;
 }
 
-#self:hover {
-    transform: translateX(500em);
-    transition: transform 2s ease-in-out;
+#email {
+    right: 4.5rem;
+    bottom: 15rem;
+    animation: phase 2.75s linear infinite alternate;
 }
 
-#contact {
-    color: antiquewhite;
-}
-
-#contact p {
-    font-size: 2.5em;
-    margin: 0em;
-}
-
-#bubble {
-    position: absolute;
-    height: 6em;
-    left: 4em;
-    bottom: 10em;
-}
-
-#bubble:hover, #bubble2:hover {
-    animation: shake 0.75s linear infinite;
-    filter: drop-shadow(0px 0px 20px antiquewhite);
-}
-
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-#email{
-    position: absolute;
-    left: 3em;
-    bottom: 4.9em;
-}
-
-#bubble2 {
-    position: absolute;
-    height: 5em;
-    left: 9em;
-    bottom: 3.5em;
+#linkedin {
+    right: 3.25rem;
+    bottom: 20rem;
+    animation: phase 2.9s linear infinite alternate;
 }
 
 #github {
-    position: absolute;
-    left: 4.6em;
-    bottom: 1.8em;
+    right: 4rem;
+    bottom: 25rem;
+    animation: phase 3s linear infinite alternate;
 }
 
-#github, #email, header h1 {
-    text-shadow: 0 0 0.125em hsl(0 0% 100%),
-        0 0 0.5em antiquewhite;
+.contact {
+    position: fixed;
+    z-index: 2;
+    font-size: 2rem;
+    color: blanchedalmond;
+    border: 4px solid blanchedalmond;
+    border-radius: 10px;
+    box-shadow: 0rem 0rem 1rem currentColor;
 }
 
-#bubble, #bubble2 {
-    filter: drop-shadow(0px 0px 10px antiquewhite);
+.contact a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.contact:hover {
+    color: #f586aca3;
+    border: 4px solid currentColor;
+    box-shadow: 0rem 0rem 3rem currentColor;
+    }
+    
+@keyframes phase {
+    0% {
+    filter: hue-rotate(0deg) blur(1px);
+    transform: translateY(0%) rotateY(0deg);
+    }
+    100% {
+    filter: hue-rotate(360deg);
+    transform: translateY(-30%) rotateY(360deg);
+  }
+}
+
+.contact p {
+    margin: 0.5rem;
+    text-shadow: 0rem 0rem 5px currentColor;
 }
