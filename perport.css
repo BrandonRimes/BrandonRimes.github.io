@@ -10,11 +10,26 @@ Composer: brndn */
 
 body {
     height: 100vh;
-    /* background: url("coffee-zoom.gif");
+    background: url("coffee-zoom.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; */
+    background-position: center;
     font-family: averia serif libre;
+}
+
+main {
+    filter: opacity(0);
+    animation: fade-in 3s ease 4s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        filter: opacity(0);
+    }
+
+    100% {
+        filter: opacity(100%);
+    }
 }
 
 #scene {
@@ -231,13 +246,13 @@ h1 span {
 h1 span:nth-child(even) {
     overflow: hidden;
     letter-spacing: -1em;
-    transition: ease-in-out 0.5s;
+    transition: ease-in 0.25s;
 }
 
 h1:hover span:nth-child(even) {
     font-size: 0.75em;
     letter-spacing: 0em;
-    transition: ease-in-out 0.5s;
+    transition: ease-out 0.25s;
 }
 /* contact --------------------------------------- */
 #self {
@@ -246,6 +261,15 @@ h1:hover span:nth-child(even) {
     z-index: 2;
     right: 1rem;
     bottom: 0rem;
+}
+
+#copyright {
+    position: fixed;
+    font-size: 1rem;
+    color: blanchedalmond;
+    z-index: 3;
+    right: 6rem;
+    bottom: 0.25rem;
 }
 
 .contact {
@@ -349,11 +373,11 @@ h1:hover span:nth-child(even) {
 #fan-body {
     background-image: url(copper.png);
     background-size: cover;
-    height: 2rem;
-    width: 5rem;
-    transform: translateY(1rem);
+    height: 5rem;
+    width: 2rem;
+    transform: translateY(-0.6rem) rotate(90deg);
     border-radius: 1rem/0.75rem;
-    box-shadow: inset 0.75rem 0 1rem black;
+    box-shadow: inset 0 -0.75rem 1rem black;
 }
 
 #fan-blades {
@@ -381,7 +405,7 @@ h1:hover span:nth-child(even) {
     background-image: url(copper.png);
     background-size: cover;
     border-radius: 0.25rem/1rem;
-    transform: translateY(2.25rem) rotate(90deg);
+    transform: translateY(2rem) rotate(90deg);
     box-shadow: inset 0rem -0.25rem 0.25rem black;
 }
 
