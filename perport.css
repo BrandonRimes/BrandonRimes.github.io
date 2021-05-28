@@ -19,7 +19,7 @@ body {
 
 main {
     filter: opacity(0);
-    animation: fade-in 3s ease 3s forwards;
+    animation: fade-in 1s ease-in-out 3s forwards;
 }
 
 @keyframes fade-in {
@@ -36,6 +36,7 @@ main {
     width: 100vw;
     height: 100vh;
     perspective: 1000px;
+    overflow: hidden;
 }
 /* room ----------------------------------- */
 #room {
@@ -80,6 +81,10 @@ main {
 #right-wall {
     background-image: url("wall-texture.jpg");
     transform: translateZ(-300px) translateX(50%) translateY(-15%) rotateY(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 0%, 0% 100%, 45% 100%, 45% 35%, 80% 35%, 80% 80%, 45% 80%, 45% 100%, 100% 100%, 100% 0%);
 }
 
 #ceiling {
@@ -230,6 +235,58 @@ main {
     transform: translateZ(-100px);
     box-shadow: inset 0rem 0rem 10rem;
 }
+/* ship ------------------------------------------ */
+#cvn {
+
+}
+
+.cvn {
+
+}
+
+#cvn-deck {
+
+}
+
+#cvn-fwd {
+    
+}
+
+#cvn-aft {
+    
+}
+
+#cvn-port {
+    
+}
+
+#cvn-stbd {
+    
+}
+
+#cvn-twr {
+    
+}
+
+#cvn-twr-deck {
+    
+}
+
+#cvn-twr-fwd {
+    
+}
+
+#cvn-twr-aft {
+    
+}
+
+#cvn-twr-port {
+    
+}
+
+#cvn-twr-stbd {
+    
+}
 /* logo ---------------------------------------------- */
 h1 {
     margin: 0em;
@@ -327,6 +384,159 @@ h1:hover span:nth-child(even) {
 #rug {
     width: 15rem;
     margin-top: 10rem;
+}
+/* certification ------------------------------ */
+#cert {
+    height: 10rem;
+    position: absolute;
+    left: 8rem;
+    top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1rem 1rem 2rem;
+}
+
+#cert:hover #cert-photo {
+    height: 33vw;
+    transform: translateX(50vw) translateY(15rem);
+    transition: all 0.25s ease-in-out;
+    animation: shadowphase 3s linear infinite;
+}
+
+@keyframes shadowphase {
+    0% {
+        box-shadow: 2rem -2rem 10rem hotpink,
+        -2rem 2rem 10rem lightgreen,
+        2rem 2rem 10rem orange,
+        -2rem -2rem 10rem aqua;
+    }
+    25% {
+        box-shadow: -2rem -2rem 10rem lightgreen,
+        2rem 2rem 10rem hotpink,
+        -2rem 2rem 10rem orange,
+        2rem -2rem 10rem aqua;
+    }
+    50% {
+        box-shadow: -2rem -2rem 10rem orange,
+        2rem -2rem 10rem lightgreen,
+        2rem 2rem 10rem aqua,
+        -2rem 2rem 10rem hotpink;
+    }
+    75% {
+        box-shadow: -2rem 2rem 10rem aqua,
+        2rem -2rem 10rem orange,
+        -2rem -2rem 10rem hotpink,
+        2rem 2rem 10rem lightgreen;
+    }
+    100% {
+        box-shadow: 2rem -2rem 10rem hotpink,
+        -2rem 2rem 10rem lightgreen,
+        -2rem -2rem 10rem aqua,
+        2rem 2rem 10rem orange;
+    }
+}
+
+.cert {
+    position: absolute;
+}
+
+#cert-photo {
+    height: 48%;
+}
+
+#cert-frame {
+    height: 100%;
+    box-shadow: -0.25rem -0.25rem 1rem;
+}
+/* window ------------------------------------- */
+#window {
+    height: 18.5rem;
+    width: 20rem;
+    position: absolute;
+    top: 11.75rem;
+    right: -4rem;
+    transform-style: preserve-3d;
+    transform: rotateY(90deg);
+}
+
+#window-view {
+    position: absolute;
+    height: 75%;
+    right: -25rem;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) translateZ(-35rem);
+}
+
+.window-frame {
+    position: absolute;
+    background-image: url("wall-texture.jpg");
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    transform-style: preserve-3d;
+}
+
+#window-frame-left {
+    height: 100%;
+    width: 3rem;
+    right: -1.5rem;
+    transform: rotateY(90deg) translateZ(0rem);
+}
+
+#window-frame-bottom {
+    height: 3rem;
+    width: 100%;
+    bottom: 0.5rem;
+    right: 0rem;
+    transform: rotateX(90deg) translateZ(0rem);
+}
+
+#window-frame-top {
+    height: 3rem;
+    width: 100%;
+    top: -1.5rem;
+    right: 0rem;
+    transform: rotateX(90deg) translateZ(0rem);
+}
+
+#window-sill {
+    width: 25rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: -16%;
+    transform-style: preserve-3d;
+    transform: translateZ(-2rem) rotateY(0deg);
+    box-shadow: 0rem 1rem 2rem;
+}
+
+.window-sill {
+    position: absolute;
+    border: 1px solid #66493c;
+    transform-style: preserve-3d;
+    background-image: url("bookshelf-texture.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#sill-top {
+    transform: rotateX(90deg) translateZ(1rem);
+}
+
+#sill-face {
+    transform: translateZ(-1rem);
+}
+
+#sill-bottom {
+    transform: rotateX(90deg) translateZ(-1rem);
+}
+
+#sill-side {
+    width: 2rem;
+    transform: rotateY(90deg) translateZ(-1rem);
 }
 /* ceiling fan -------------------------------- */
 #fan {
