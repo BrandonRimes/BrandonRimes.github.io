@@ -235,6 +235,184 @@ main {
     transform: translateZ(-100px);
     box-shadow: inset 0rem 0rem 10rem;
 }
+/* books ----------------------------------------- */
+#books {
+    position: absolute;
+    height: 6rem;
+    width: 12rem;
+    transform-style: preserve-3d;
+    transform: translateZ(2rem) translateY(10rem);
+}
+
+#books:hover .books{
+    animation: sway 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(-12deg) translateY(0rem);
+    }
+    100% {
+        transform: rotate(12deg) translateY(-1rem) translateX(1rem) translateZ(0rem);
+    }
+}
+
+.books {
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotate(-10deg);
+}
+
+.book-spines, .book-faces {
+    position: absolute;
+    border: 1px solid black;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-spines {
+    transform: rotate(90deg);
+    box-shadow: 0.75rem 0rem 0.25rem black;
+}
+
+.book-faces {
+    box-shadow: 1rem 0.75rem 1rem black;
+}
+
+#book-py {
+    color: floralwhite;
+    left: 1.75rem;
+    bottom: 3rem;
+    transform: translateZ(-1rem) rotate(-10deg);
+}
+
+#py-spine {
+    background-color: cadetblue;
+    height: 2rem;
+    width: 4rem;
+}
+
+#py-face {
+    background-color: darkcyan;
+    height: 4rem;
+    width: 3rem;
+    left: 1.5rem;
+    bottom: -3rem;
+    transform: rotateY(90deg) translateX(1.5rem);
+    align-items: flex-start;
+}
+
+#book-js {
+    color: black;
+    left: -1rem;
+    bottom: 3.35rem;
+    transform: translateZ(1rem) rotate(-8deg);
+}
+
+#js-spine {
+    background: linear-gradient(navajowhite, white, navajowhite);
+    height: 1rem;
+    width: 6rem;
+}
+
+#js-face {
+    background-color: navajowhite;
+    height: 6rem;
+    width: 4rem;
+    left: 1.5rem;
+    bottom: -3.5rem;
+    transform: rotateY(90deg) translateX(2rem);
+}
+
+#book-html {
+    color: antiquewhite;
+    left: 4rem;
+    bottom: 2.2rem;
+    transform: translateZ(-0.25rem) rotate(-10deg);
+}
+
+#html-spine {
+    font-size: 0.85rem;
+    background-color: goldenrod;
+    height: 1.25rem;
+    width: 3rem;
+}
+
+#html-face {
+    height: 3rem;
+    width: 3rem;
+    left: 0.65rem;
+    bottom: -2.1rem;
+    transform: rotateY(90deg) translateX(1.5rem);
+}
+
+#book-css {
+    color: linear-gradient(pink, cyan);
+    left: 5.25rem;
+    bottom: 2.65rem;
+    transform: translateZ(0rem) rotate(-11deg);
+}
+
+#css-spine {
+    font-size: 1.75rem;
+    background: linear-gradient(0.1turn, pink, floralwhite, cyan);
+    height: 1.75rem;
+    width: 3.5rem;
+}
+
+#css-face {
+    background: linear-gradient(0.55turn, pink, floralwhite, cyan);
+    height: 3.5rem;
+    width: 3.5rem;
+    left: 0.95rem;
+    bottom: -2.65rem;
+    transform: rotateY(90deg) translateX(1.5rem);
+}
+
+#book-django {
+    left: 6.75rem;
+    bottom: 2.25rem;
+    transform: translateZ(0rem) rotate(-13deg);
+}
+
+#django-spine {
+    background-color: rosybrown;
+    height: 1rem;
+    width: 4rem;
+}
+
+#django-face {
+    background-color: rosybrown;
+    height: 4rem;
+    width: 4rem;
+    left: 0.5rem;
+    bottom: -2.5rem;
+    transform: rotateY(90deg) translateX(2rem);
+}
+
+#book-vue {
+    color: #3fb883;
+    left: 8.25rem;
+    bottom: 2.1rem;
+    transform: translateZ(0rem) rotate(-14deg);
+}
+
+#vue-spine {
+    background-color: #33485e;
+    height: 1rem;
+    width: 3.5rem;
+}
+
+#vue-face {
+    background-color: #33485e;
+    height: 3.5rem;
+    width: 4rem;
+    left: 0.25rem;
+    bottom: -2.25rem;
+    transform: rotateY(90deg) translateX(2rem);
+}
 /* ship ------------------------------------------ */
 #cvn {
 
@@ -447,7 +625,7 @@ h1:hover span:nth-child(even) {
 
 #cert-frame {
     height: 100%;
-    box-shadow: -0.25rem -0.25rem 1rem;
+    box-shadow: -0.5rem 0.5rem 1rem;
 }
 /* window ------------------------------------- */
 #window {
