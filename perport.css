@@ -244,16 +244,16 @@ main {
     transform: translateZ(2rem) translateY(10rem);
 }
 
-#books:hover .books{
-    animation: sway 0.5s ease-in-out infinite alternate;
+.books:hover {
+    animation: sway 0.25s ease-in-out forwards;
 }
 
 @keyframes sway {
     0% {
-        transform: rotate(-12deg) translateY(0rem);
+        transform: rotate(-10deg) translateY(0rem);
     }
     100% {
-        transform: rotate(12deg) translateY(-1rem) translateX(1rem) translateZ(0rem);
+        transform: rotate(-5deg) translateY(-0.5rem) translateX(0rem) translateZ(2rem);
     }
 }
 
@@ -274,11 +274,11 @@ main {
 
 .book-spines {
     transform: rotate(90deg);
-    box-shadow: 0.75rem 0rem 0.25rem black;
+    box-shadow: 0.75rem 0.25rem 0.75rem black;
 }
 
 .book-faces {
-    box-shadow: 1rem 0.75rem 1rem black;
+    box-shadow: 2rem 0.75rem 1rem black;
 }
 
 #book-py {
@@ -341,6 +341,7 @@ main {
 }
 
 #html-face {
+    background-color: goldenrod;
     height: 3rem;
     width: 3rem;
     left: 0.65rem;
