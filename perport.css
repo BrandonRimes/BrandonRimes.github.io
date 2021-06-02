@@ -9,6 +9,7 @@ Composer: brndn */
 }
 
 body {
+    width: 100vw;
     height: 100vh;
     background: url("coffee-zoom.gif");
     background-repeat: no-repeat;
@@ -33,15 +34,16 @@ main {
 }
 
 #scene {
-    width: 100vw;
+    width: 200vw;
     height: 100vh;
+    max-height: 100vh;
     perspective: 1000px;
     overflow: hidden;
 }
 /* room ----------------------------------- */
 #room {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(100px);
@@ -49,8 +51,8 @@ main {
 
 .surfaces {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     text-align: center;
     background-position: center;
@@ -60,14 +62,15 @@ main {
 
 #back-wall {
     background-image: url("back-wall.jpg");
-    transform: translateZ(-500px) translateY(-15%);
+    transform: translateZ(-65vh) translateY(-15%);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #floor {
     background-image: url("wood-floor2.jpg");
-    transform: translateZ(-117px) translateY(35%) rotateX(90deg);
+    transform: translateZ(-15vh) translateY(35%) rotateX(90deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,30 +78,29 @@ main {
 
 #left-wall {
     background-image: url("wall-texture.jpg");
-    transform: translateZ(-300px) translateX(-50%) translateY(-15%) rotateY(90deg);
+    width: 1000px;
+    transform: translateZ(-20vh) translateX(-50%) translateY(-15%) rotateY(90deg);
 }
 
 #right-wall {
     background-image: url("wall-texture.jpg");
-    transform: translateZ(-300px) translateX(50%) translateY(-15%) rotateY(-90deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: translateZ(-20vw) translateX(50%) translateY(-15%) rotateY(270deg);
     clip-path: polygon(0% 0%, 0% 100%, 45% 100%, 45% 35%, 80% 35%, 80% 80%, 45% 80%, 45% 100%, 100% 100%, 100% 0%);
 }
 
 #ceiling {
     background-image: url("wall-texture.jpg");
-    transform: translateZ(-145px) translateY(-65%) rotateX(-90deg);
+    transform: translateZ(-15vh) translateY(-65%) rotateX(-90deg);
 }
 /* bookshelf ------------------------------------- */
 #bookshelf {
-    width: 33vw;
-    height: 66vh;
+    width: 33%;
+    height: 66%;
     position: absolute;
     bottom: 15%;
+    right: 1vw;
     transform-style: preserve-3d;
-    transform: translateZ(-23rem);
+    transform: translateZ(-40vh) translateX(-10vw) rotateY(-25deg);
     box-shadow: inset 0rem 0rem 10rem white;
 }
 
@@ -238,17 +240,18 @@ main {
 /* books ----------------------------------------- */
 #books {
     position: absolute;
-    height: 6rem;
-    width: 12rem;
+    height: 14vh;
+    width: 20vw;
+    top: 19.5vh;
     transform-style: preserve-3d;
-    transform: translateZ(2rem) translateY(10rem);
+    transform: translateZ(2vh);
 }
 
 .books:hover {
-    animation: sway 0.25s ease-in-out forwards;
+    animation: book-move 0.25s ease-in-out forwards;
 }
 
-@keyframes sway {
+@keyframes book-move {
     0% {
         transform: rotate(-10deg) translateY(0rem);
     }
@@ -260,7 +263,6 @@ main {
 .books {
     position: absolute;
     transform-style: preserve-3d;
-    transform: rotate(-10deg);
 }
 
 .book-spines, .book-faces {
@@ -472,6 +474,7 @@ h1 {
     font-size: 3rem;
     color: blanchedalmond;
     text-shadow: 0rem 0rem 10px black;
+    transform: translate(-50vw, -32vh)
 }
 
 h1 span {
@@ -534,20 +537,20 @@ h1:hover span:nth-child(even) {
 }
 
 #email {
-    right: 5rem;
-    bottom: 22rem;
+    right: 10vw;
+    bottom: 40vh;
     animation: phase 2.75s linear infinite alternate;
 }
 
 #linkedin {
-    right: 3.75rem;
-    bottom: 34rem;
+    right: 20vw;
+    bottom: 55vh;
     animation: phase 2.9s linear infinite alternate;
 }
 
 #github {
-    right: 4.5rem;
-    bottom: 28rem;
+    left: 20vw;
+    bottom: 70vh;
     animation: phase 3s linear infinite alternate;
 }
     
@@ -561,59 +564,21 @@ h1:hover span:nth-child(even) {
 }
 /* rug ---------------------------------------- */
 #rug {
-    width: 15rem;
-    margin-top: 10rem;
+    width: 50vh;
+    height: 100vw;
+    margin-top: 50vh;
+    transform: rotate(-88deg);
 }
 /* certification ------------------------------ */
 #cert {
-    height: 10rem;
+    height: 20vh;
     position: absolute;
-    left: 8rem;
-    top: 2.5rem;
+    right: 30vw;
+    top: 2.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 1rem 1rem 2rem;
-}
-
-#cert:hover #cert-photo {
-    height: 33vw;
-    transform: translateX(50vw) translateY(15rem);
-    transition: all 0.25s ease-in-out;
-    animation: shadowphase 3s linear infinite;
-}
-
-@keyframes shadowphase {
-    0% {
-        box-shadow: 2rem -2rem 10rem hotpink,
-        -2rem 2rem 10rem lightgreen,
-        2rem 2rem 10rem orange,
-        -2rem -2rem 10rem aqua;
-    }
-    25% {
-        box-shadow: -2rem -2rem 10rem lightgreen,
-        2rem 2rem 10rem hotpink,
-        -2rem 2rem 10rem orange,
-        2rem -2rem 10rem aqua;
-    }
-    50% {
-        box-shadow: -2rem -2rem 10rem orange,
-        2rem -2rem 10rem lightgreen,
-        2rem 2rem 10rem aqua,
-        -2rem 2rem 10rem hotpink;
-    }
-    75% {
-        box-shadow: -2rem 2rem 10rem aqua,
-        2rem -2rem 10rem orange,
-        -2rem -2rem 10rem hotpink,
-        2rem 2rem 10rem lightgreen;
-    }
-    100% {
-        box-shadow: 2rem -2rem 10rem hotpink,
-        -2rem 2rem 10rem lightgreen,
-        -2rem -2rem 10rem aqua,
-        2rem 2rem 10rem orange;
-    }
 }
 
 .cert {
@@ -630,21 +595,22 @@ h1:hover span:nth-child(even) {
 }
 /* window ------------------------------------- */
 #window {
-    height: 18.5rem;
-    width: 20rem;
+    height: 50vh;
+    width: 35vw;
     position: absolute;
-    top: 11.75rem;
-    right: -4rem;
+    top: 19.5%;
+    right: -20vw;
     transform-style: preserve-3d;
-    transform: rotateY(90deg);
+    transform: rotateY(90deg) translateX(25.5%);
 }
 
 #window-view {
     position: absolute;
-    height: 75%;
-    right: -25rem;
+    height: 75vh;
+    top: 0vh;
+    right: -50vw;
     transform-style: preserve-3d;
-    transform: rotateY(0deg) translateZ(-35rem);
+    transform: rotateY(0deg) translateZ(-66vh);
 }
 
 .window-frame {
@@ -719,13 +685,13 @@ h1:hover span:nth-child(even) {
 }
 /* ceiling fan -------------------------------- */
 #fan {
-    height: 6rem;
-    width: 17rem;
+    height: 12vh;
+    width: 18rem;
     position: absolute;
-    top: -5.5rem;
+    top: -9%;
     left: 50%;
     transform-style: preserve-3d;
-    transform: translateZ(-22rem) translateX(-50%);
+    transform: translateZ(-40vh) translateX(-50%);
     display: flex;
     justify-content: center;
 }
@@ -828,6 +794,11 @@ h1:hover span:nth-child(even) {
 
 /* responsive 768px --------------------------- */
 @media (min-width: 768px) {
+
+    #scene {
+        width: 100vw;
+        height: 100vh;
+    }
     
     #back-wall {
         align-items: center;
@@ -835,10 +806,13 @@ h1:hover span:nth-child(even) {
 
     #bookshelf {
         width: 25vw;
+        right: unset;
+        transform: translateZ(-45vh);
     }
 
     h1 {
         font-size: 5rem;
+        transform: unset;
     }
     
     .contact {
@@ -856,6 +830,7 @@ h1:hover span:nth-child(even) {
     }
 
     #github {
+        left: unset;
         right: 4rem;
         bottom: 25rem;
     }
@@ -872,9 +847,54 @@ h1:hover span:nth-child(even) {
     }
 
     #rug {
-        width: 25rem;
-        transform: rotate(-88deg);
-        margin-top: 30rem;
+        width: unset;
+        height: 50vw;
+    }
+
+    #cert {
+        right: unset;
+        left: 15vw;
+        top: 5vh;
+    }
+
+    #cert:hover #cert-photo {
+        height: 33vw;
+        transform: translateX(50vw) translateY(33vh);
+        transition: all 0.25s ease-in-out;
+        animation: shadowphase 3s linear infinite;
+    }
+
+    @keyframes shadowphase {
+        0% {
+            box-shadow: 2rem -2rem 10rem hotpink,
+            -2rem 2rem 10rem lightgreen,
+            2rem 2rem 10rem orange,
+            -2rem -2rem 10rem aqua;
+        }
+        25% {
+            box-shadow: -2rem -2rem 10rem lightgreen,
+            2rem 2rem 10rem hotpink,
+            -2rem 2rem 10rem orange,
+            2rem -2rem 10rem aqua;
+        }
+        50% {
+            box-shadow: -2rem -2rem 10rem orange,
+            2rem -2rem 10rem lightgreen,
+            2rem 2rem 10rem aqua,
+            -2rem 2rem 10rem hotpink;
+        }
+        75% {
+            box-shadow: -2rem 2rem 10rem aqua,
+            2rem -2rem 10rem orange,
+            -2rem -2rem 10rem hotpink,
+            2rem 2rem 10rem lightgreen;
+        }
+        100% {
+            box-shadow: 2rem -2rem 10rem hotpink,
+            -2rem 2rem 10rem lightgreen,
+            -2rem -2rem 10rem aqua,
+            2rem 2rem 10rem orange;
+        }
     }
 
 }
