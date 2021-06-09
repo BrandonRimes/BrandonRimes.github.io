@@ -3,8 +3,8 @@ Personal Portfolio
 Composer: brndn */
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -517,50 +517,82 @@ h1:hover span:nth-child(even) {
     font-size: 2rem;
     color: blanchedalmond;
     border: 4px solid currentColor;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0rem 0rem 1rem currentColor;
+    background: #ffbd0b;
+    border-top: 5px solid #ffd84c;
+    border-left: 5px solid #ffd84c;
+    border-right: 5px solid #d57e08;
+    border-bottom: 5px solid #d57e08;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+.contact::before {
+    content: '';
+    margin: 0rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f0a608;
+    border-radius: inherit;
+    border-bottom: 5px solid #ffd84c;
+    border-right: 5px solid #ffd84c;
+    border-left: 5px solid #d57e08;
+    border-top: 5px solid #d57e08;
+    z-index: -1;
+}
+
+.contact:hover {
+    box-shadow: inset 0rem 0rem 1rem 0rem currentColor;
+    transform: scale(1.05);
+    transition: transform 0.25s ease-in-out;
+}
+
+.contact:hover::after {
+    content: '';
+    z-index: 3;
+    position: absolute;
+    height: 4rem;
+    width: 10rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.22));
+    transform: rotate(-50deg);
+    animation: shine 0.25s linear forwards;
+}
+
+@keyframes shine {
+    0% {
+        margin: -3rem -8rem;
+    }
+    
+    100% {
+        margin: -3rem 8rem;
+    }
 }
 
 .contact a {
     text-decoration: none;
-    color: currentColor;
+    color: #ffd84c;
 }
 
 .contact p {
     margin: 0.5rem;
-    text-shadow: 0rem 0rem 5px currentColor;
-}
-
-.contact:hover {
-    color: #f586aca3;
-    box-shadow: 0rem 0rem 3rem currentColor;
+    text-shadow: 2px 2px 1px #cb7407;
 }
 
 #email {
-    right: 10vw;
-    bottom: 40vh;
-    animation: phase 2.75s linear infinite alternate;
+    right: 4.5rem;
+    bottom: 15rem;
 }
 
 #linkedin {
-    right: 20vw;
-    bottom: 55vh;
-    animation: phase 2.9s linear infinite alternate;
+    right: 3.25rem;
+    bottom: 20rem;
 }
 
 #github {
-    left: 20vw;
-    bottom: 70vh;
-    animation: phase 3s linear infinite alternate;
-}
-    
-@keyframes phase {
-    0% {
-        filter: hue-rotate(0deg) blur(1px);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
+    right: 4rem;
+    bottom: 25rem;
 }
 /* rug ---------------------------------------- */
 #rug {
@@ -830,20 +862,8 @@ h1:hover span:nth-child(even) {
     }
 
     #github {
-        left: unset;
         right: 4rem;
         bottom: 25rem;
-    }
-
-    @keyframes phase {
-        0% {
-            filter: hue-rotate(0deg) blur(1px);
-            transform: translateY(0%) rotateY(0deg);
-        }
-        100% {
-            filter: hue-rotate(360deg);
-            transform: translateY(-30%) rotateY(360deg);
-        }
     }
 
     #rug {
