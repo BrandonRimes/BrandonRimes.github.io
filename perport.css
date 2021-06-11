@@ -416,6 +416,15 @@ main {
     bottom: -2.25rem;
     transform: rotateY(90deg) translateX(2rem);
 }
+
+#puppub {
+    position: absolute;
+    height: 14vh;
+    bottom: 16vh;
+    right: 2vw;
+    transform-style: preserve-3d;
+    transform: translateZ(5vh);
+}
 /* ship ------------------------------------------ */
 #cvn {
 
