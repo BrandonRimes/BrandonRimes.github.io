@@ -775,7 +775,7 @@ h1:hover span:nth-child(even) {
     justify-content: center;
 }
 
-#fan:hover #fan-blades {
+/* #fan:hover #fan-blades {
     animation: fan-hover 5s ease-in-out infinite;
 }
 
@@ -787,7 +787,7 @@ h1:hover span:nth-child(even) {
     100% {
         transform: translateY(3rem) rotateX(90deg) rotate(3600deg);
     }
-}
+} */
 
 .fan {
     position: absolute;
