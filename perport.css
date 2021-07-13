@@ -11,7 +11,7 @@ Composer: brndn */
 body {
     width: 100vw;
     height: 100vh;
-    background: url("coffee-zoom.gif");
+    background: url("images/coffee-zoom.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -61,7 +61,7 @@ main {
 }
 
 #back-wall {
-    background-image: url("back-wall.jpg");
+    background-image: url("images/back-wall.jpg");
     transform: translateZ(-65vh) translateY(-15%);
     display: flex;
     justify-content: center;
@@ -69,7 +69,7 @@ main {
 }
 
 #floor {
-    background-image: url("wood-floor2.jpg");
+    background-image: url("images/wood-floor2.jpg");
     transform: translateZ(-15vh) translateY(35%) rotateX(90deg);
     display: flex;
     justify-content: center;
@@ -77,19 +77,19 @@ main {
 }
 
 #left-wall {
-    background-image: url("wall-texture.jpg");
+    background-image: url("images/wall-texture.jpg");
     width: 1000px;
     transform: translateZ(-20vh) translateX(-50%) translateY(-15%) rotateY(90deg);
 }
 
 #right-wall {
-    background-image: url("wall-texture.jpg");
+    background-image: url("images/wall-texture.jpg");
     transform: translateZ(-20vw) translateX(50%) translateY(-15%) rotateY(270deg);
     clip-path: polygon(0% 0%, 0% 100%, 45% 100%, 45% 35%, 80% 35%, 80% 80%, 45% 80%, 45% 100%, 100% 100%, 100% 0%);
 }
 
 #ceiling {
-    background-image: url("wall-texture.jpg");
+    background-image: url("images/wall-texture.jpg");
     transform: translateZ(-15vh) translateY(-65%) rotateX(-90deg);
 }
 /* bookshelf ------------------------------------- */
@@ -112,7 +112,7 @@ main {
     position: absolute;
     border: 1px solid #66493c;
     transform-style: preserve-3d;
-    background-image: url("bookshelf-texture.jpg");
+    background-image: url("images/bookshelf-texture.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -694,7 +694,7 @@ h1:hover span:nth-child(even) {
 
 .window-frame {
     position: absolute;
-    background-image: url("wall-texture.jpg");
+    background-image: url("images/wall-texture.jpg");
     background-position: center;
     background-size: cover;
     border: 1px solid black;
@@ -739,7 +739,7 @@ h1:hover span:nth-child(even) {
     position: absolute;
     border: 1px solid #66493c;
     transform-style: preserve-3d;
-    background-image: url("bookshelf-texture.jpg");
+    background-image: url("images/bookshelf-texture.jpg");
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -798,14 +798,14 @@ h1:hover span:nth-child(even) {
 #fan-stem {
     height: 1rem;
     width: 3rem;
-    background-image: url(copper.png);
+    background-image: url("images/copper.png");
     background-size: cover;
     box-shadow: inset 0rem 0.25rem 0.5rem black;
     transform: rotate(-90deg);
 }
 
 #fan-body {
-    background-image: url(copper.png);
+    background-image: url("images/copper.png");
     background-size: cover;
     height: 5rem;
     width: 2rem;
@@ -815,7 +815,7 @@ h1:hover span:nth-child(even) {
 }
 
 #fan-blades {
-    background-image: url(copper.png);
+    background-image: url("images/copper.png");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -836,7 +836,7 @@ h1:hover span:nth-child(even) {
 #fan-center {
     height: 2rem;
     width: 1rem;
-    background-image: url(copper.png);
+    background-image: url("images/copper.png");
     background-size: cover;
     border-radius: 0.25rem/1rem;
     transform: translateY(2rem) rotate(90deg);
@@ -846,7 +846,7 @@ h1:hover span:nth-child(even) {
 #fan-blade1, #fan-blade2, #fan-blade3, #fan-blade4 {
     height: 7rem;
     width: 2.5rem;
-    background-image: url("bookshelf-texture.jpg");
+    background-image: url("images/bookshelf-texture.jpg");
     background-size: cover;
     border-radius: 0.75rem;
     box-shadow: inset 0 0 1rem black;
