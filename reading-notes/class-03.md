@@ -7,10 +7,10 @@
   - `<dd>` = definition definition
 
 - JavaScript Switch Statements:
-  - `switch (value) {`
-      `case value:`
-        `do this`
-        `break;`
-      `case value:`
-        `do this`
-        `break;`
+  - `switch (value) {`  
+      `case value:`  
+        `do this`  
+        `break;`  
+      `case value:`  
+        `do this`  
+        `break;`  
