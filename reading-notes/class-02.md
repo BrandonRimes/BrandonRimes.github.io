@@ -28,3 +28,11 @@
   - **Declaration** = how to style (**Properties** and their **Values**)
   - **Property** = aspects to change
   - **Value** = settings to use
+
+- JavaScript Variable Assignment Shorthand:
+  - `var a, b, c;`
+    `a = 1;`
+    `b = 2;`
+    `c = a + b;`
+  - `var a = 1, b =2;`
+    `var c = a + b;`

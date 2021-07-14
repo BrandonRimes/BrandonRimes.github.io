@@ -9,4 +9,3 @@
   - `<h1>` - groups heading elements. h1-6
   - `<figure>` - contains content like code samples, supporting text, images, and videos.
   - `<figcaption>` - container for a text description of a figure element.
-
