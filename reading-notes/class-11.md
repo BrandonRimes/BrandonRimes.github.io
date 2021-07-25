@@ -2,7 +2,7 @@
 
 - Positioning a background image:
   - `background-repeat:` must be set to `no-repeat;`
-  - `background-position:` can recieve a pair of values
+  - `background-position:` can receive a pair of values
     - The first value is horizontal `left`, `center`, or `right`
     - The second is vertical, `top`, `center`, or `bottom`
     - Pixels and percentages can be used and are in relation to top left

@@ -9,7 +9,7 @@
   - [four](class-04.md)
   - [five](class-05.md)
   - [six](class-06.md)
-  - seven
+  - [seven](class-07.md)
   - eight
   - nine
   - [ten](class-10.md)
