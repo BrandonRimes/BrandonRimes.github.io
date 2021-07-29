@@ -14,4 +14,3 @@
 - Additional resources:
   - [https://www.awwwards.com/](https://www.awwwards.com/)
   - [https://www.cssdesignawards.com/](https://www.cssdesignawards.com/)
-  - 
