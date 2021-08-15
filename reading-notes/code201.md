@@ -2,7 +2,7 @@
 
 ## Reading from 'HTML & CSS' and 'JavaScript & JQuery' by Jon Duckett
 
-- **- Entries -**
+- **Entries**
   - [one](two-oh/class-01.md)
   - [two](two-oh/class-02.md)
   - [three](two-oh/class-03.md)
