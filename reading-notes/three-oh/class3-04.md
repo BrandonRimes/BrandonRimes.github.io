@@ -12,14 +12,14 @@
   - To toggle between conditional options.
 - Rewrite the following statement using a ternary statement:
 
-  '''javascript
+  ```javascript
     if(x===y){
       console.log(true);
     } else {
       console.log(false);
     }
-  '''
+  ```
 
-  - '''javascript
+  - ```javascript
     (x===y) ? console.log(true) : console.log(false);
-    '''
+    ```
