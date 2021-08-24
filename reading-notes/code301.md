@@ -7,3 +7,4 @@
   - [four](three-oh/class3-04.md)
   - [five](three-oh/class3-05.md)
   - [six](three-oh/class3-06.md)
+  - [seven](three-oh/class3-07.md)
