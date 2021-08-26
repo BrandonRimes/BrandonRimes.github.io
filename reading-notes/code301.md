@@ -8,3 +8,5 @@
   - [five](three-oh/class3-05.md)
   - [six](three-oh/class3-06.md)
   - [seven](three-oh/class3-07.md)
+  - [eight](three-oh/class3-08.md)
+  - [nine](three-oh/class3-09.md)
