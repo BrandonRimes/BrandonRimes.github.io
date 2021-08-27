@@ -10,3 +10,4 @@
   - [seven](three-oh/class3-07.md)
   - [eight](three-oh/class3-08.md)
   - [nine](three-oh/class3-09.md)
+  - [ten](three-oh/class3-10.md)
