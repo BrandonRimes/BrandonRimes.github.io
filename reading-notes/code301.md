@@ -13,3 +13,5 @@
   - [ten](three-oh/class3-10.md)
   - [eleven](three-oh/class3-11.md)
   - [twelve](three-oh/class3-12.md)
+  - [thirteen](three-oh/class3-13.md)
+  - [fourteen](three-oh/class3-14.md)
