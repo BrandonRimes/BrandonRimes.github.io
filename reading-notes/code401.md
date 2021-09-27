@@ -6,3 +6,4 @@
   - [three](four-oh/class4-03.md)
   - [four](four-oh/class4-04.md)
   - [five](four-oh/class4-05.md)
+  - [six](four-oh/class4-06.md)
