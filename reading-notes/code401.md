@@ -11,5 +11,6 @@
 - seven
 - [eight](four-oh/class4-08.md)
 - [nine](four-oh/class4-09.md)
+- [ten](four-oh/class4-10.md)
 
 ___
