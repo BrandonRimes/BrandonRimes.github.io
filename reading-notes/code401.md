@@ -12,5 +12,7 @@
 - [eight](four-oh/class4-08.md)
 - [nine](four-oh/class4-09.md)
 - [ten](four-oh/class4-10.md)
+- [eleven](four-oh/class4-11.md)
+- [twelve](four-oh/class4-12.md)
 
 ___
