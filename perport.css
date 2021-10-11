@@ -421,7 +421,7 @@ main {
     position: absolute;
     height: 14vh;
     bottom: 16vh;
-    right: 2vw;
+    right: 3vw;
     transform-style: preserve-3d;
     transform: translateZ(5vh);
 }
