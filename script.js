@@ -9,7 +9,7 @@ for (var i = 0; i < objects.length; i++) {
 const surfaces = document.getElementsByClassName("surfaces");
 for (var i = 0; i < surfaces.length; i++) {
     surfaces[i].addEventListener("mouseover", function() {
-        word.innerHTML = "<p>Welcome!<br>Make yourself at home.</p>";
+        word.innerHTML = "<h4>Welcome!<br>I'm Brandon Rimes, Software Developer.</h4>";
     });
 }
 

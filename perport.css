@@ -284,20 +284,20 @@ main {
 }
 
 #book-py {
-    color: floralwhite;
+    color: #FFD43B;
     left: 1.75rem;
     bottom: 3rem;
     transform: translateZ(-1rem) rotate(-10deg);
 }
 
 #py-spine {
-    background-color: cadetblue;
+    background-color: #306998;
     height: 2rem;
     width: 4rem;
 }
 
 #py-face {
-    background-color: darkcyan;
+    background-color: #306998;
     height: 4rem;
     width: 3rem;
     left: 1.5rem;
@@ -314,13 +314,13 @@ main {
 }
 
 #js-spine {
-    background: linear-gradient(navajowhite, white, navajowhite);
+    background-color: #F0DB4F;
     height: 1rem;
     width: 6rem;
 }
 
 #js-face {
-    background-color: navajowhite;
+    background-color: #F0DB4F;
     height: 6rem;
     width: 4rem;
     left: 1.5rem;
@@ -329,7 +329,7 @@ main {
 }
 
 #book-html {
-    color: antiquewhite;
+    color: white;
     left: 4rem;
     bottom: 2.2rem;
     transform: translateZ(-0.25rem) rotate(-10deg);
@@ -337,13 +337,13 @@ main {
 
 #html-spine {
     font-size: 0.85rem;
-    background-color: goldenrod;
+    background-color: #F06529;
     height: 1.25rem;
     width: 3rem;
 }
 
 #html-face {
-    background-color: goldenrod;
+    background-color: #F06529;
     height: 3rem;
     width: 3rem;
     left: 0.65rem;
@@ -375,19 +375,20 @@ main {
 }
 
 #book-django {
+    color: white;
     left: 6.75rem;
     bottom: 2.25rem;
     transform: translateZ(0rem) rotate(-13deg);
 }
 
 #django-spine {
-    background-color: rosybrown;
+    background-color: #092e20;
     height: 1rem;
     width: 4rem;
 }
 
 #django-face {
-    background-color: rosybrown;
+    background-color: #092e20;
     height: 4rem;
     width: 4rem;
     left: 0.5rem;
@@ -396,26 +397,49 @@ main {
 }
 
 #book-vue {
-    color: #3fb883;
+    color: #41B883;
     left: 8.25rem;
     bottom: 2.1rem;
     transform: translateZ(0rem) rotate(-14deg);
 }
 
 #vue-spine {
-    background-color: #33485e;
+    background-color: #34495E;
     height: 1rem;
     width: 3.5rem;
 }
 
 #vue-face {
-    background-color: #33485e;
+    background-color: #34495E;
     height: 3.5rem;
     width: 4rem;
     left: 0.25rem;
     bottom: -2.25rem;
     transform: rotateY(90deg) translateX(2rem);
 }
+
+#book-react {
+    left: 10rem;
+    bottom: 2.3rem;
+    transform: translateZ(0rem) rotate(-15deg);
+}
+
+#react-spine {
+    background-color: #61DBFB;
+    height: 1.25rem;
+    width: 4rem;
+}
+
+#react-face {
+    background-color: #61DBFB;
+    height: 4rem;
+    width: 4rem;
+    left: 0.7rem;
+    bottom: -2.66rem;
+    transform: rotateY(90deg) translateX(1.75rem);
+}
+
+/* book end --------------------------- */
 
 #puppub {
     position: absolute;
