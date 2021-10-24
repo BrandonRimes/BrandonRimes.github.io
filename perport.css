@@ -601,14 +601,14 @@ h1:hover span:nth-child(even) {
 #word {
     position: absolute;
     height: auto;
-    right: 12rem;
-    bottom: 10rem;
+    right: 13rem;
+    bottom: 9rem;
     padding: 0 1rem;
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(20, 20, 20, 0.33);
+    background-color: rgba(20, 20, 20, 0.42);
     color: blanchedalmond;
     font-size: 1.25rem;
     border-radius: 10px;
@@ -753,6 +753,7 @@ h1:hover span:nth-child(even) {
     justify-content: center;
     align-items: center;
     box-shadow: 1rem 1rem 2rem;
+    transform: translateZ(-65vh) translateY(-15vh);
 }
 
 .cert {
