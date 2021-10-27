@@ -18,10 +18,10 @@ body {
     font-family: averia serif libre;
 }
 
-main {
+/* main {
     filter: opacity(0);
     animation: fade-in 1s ease-in-out 3s forwards;
-}
+} */
 
 @keyframes fade-in {
     0% {
@@ -58,6 +58,11 @@ main {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0rem 0rem 10rem;
+}
+
+.objects {
+    position: absolute;
+    transform-style: preserve-3d;
 }
 
 #back-wall {
@@ -260,11 +265,6 @@ main {
     }
 }
 
-.books {
-    position: absolute;
-    transform-style: preserve-3d;
-}
-
 .book-spines, .book-faces {
     position: absolute;
     border: 1px solid black;
@@ -442,25 +442,54 @@ main {
 /* book end --------------------------- */
 
 #puppub {
-    position: absolute;
     height: 14vh;
+    width: 8vh;
     bottom: 16vh;
-    right: 3vw;
-    transform-style: preserve-3d;
+    right: 2vw;
     transform: translateZ(5vh);
+    background-image: url("images/hydrant-doodle.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#puppub:hover {
+    animation: hydrant 0.5s linear infinite;
+}
+
+@keyframes hydrant {
+    0% {
+        transform: rotate(0deg) translateZ(5vh);
+    }
+    20% {
+        transform: rotate(-3deg) translateY(-1vh) translateZ(5vh);
+    }
+    40% {
+        transform: rotate(3deg) translateZ(5vh);
+    }
+    60% {
+        transform: rotate(-3deg) translateZ(5vh);
+    }
+    80% {
+        transform: rotate(3deg) translateY(-1vh) translateZ(5vh);
+    }
+    100% {
+        transform: rotate(0deg) translateZ(5vh);
+    }
 }
 
 /* savor ------------------------------ */
 #savor {
-    position: absolute;
     height: 13vh;
     width: 13vh;
     bottom: 16vh;
     left: 1vw;
 }
+
 #savor-bouy {
     height: 100%;
 }
+
 #savor-coin {
     position: absolute;
     height: 50%;
@@ -482,6 +511,7 @@ main {
     padding-top: 5%;
     transition: all 0.2s ease-in-out;
 }
+
 #savor-coin::after {
     content: '';
     position: absolute;
@@ -498,12 +528,15 @@ main {
     border-top: 4px solid #d57e08;
     transition: all 0.2s ease-in-out
 }
+
 #savor:hover {
     animation: savor 0.5s ease-in-out infinite alternate;
 }
+
 #savor:hover #savor-coin {
     animation: savorotate 1.2s linear infinite;
 }
+
 @keyframes savor {
     0% {
         transform: translateY(0%);
@@ -512,6 +545,7 @@ main {
         transform: translateY(-5%);
     }
 }
+
 @keyframes savorotate {
     0% {
         transform: rotateY(0deg);
@@ -520,6 +554,62 @@ main {
         transform: rotateY(360deg);
     }
 }
+
+/* keys -------------------------------------*/
+#keys {
+    height: 10vh;
+    width: 18vh;
+    top: 9.5vh;
+    left: 0vh;
+    transform: rotateX(45deg) rotateY(20deg) rotate(-20deg) translateZ(2rem) translateY(-0.75vw) translateX(1vw);
+    transition: all 0.25s ease-in-out;
+}
+
+.keys {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+#keys-face {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://301keys.netlify.app/static/media/polyD-dark.e7bb0206.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#keys-side,
+#keys-front {
+    background-image: url("images/keys-texture.png");
+    border: 1px solid black;
+}
+
+#keys-side {
+    height: 100%;
+    width: 2vh;
+    left: 0;
+    transform: rotateY(90deg) translateZ(-0.33rem) translateX(1vh);
+}
+
+#keys-front {
+    height: 2vh;
+    width: 100%;
+    bottom: 0;
+    transform: rotateX(90deg) translateZ(-0.33rem) translateY(-1vh);
+}
+
+#keys:hover {
+    transform: rotateX(-45deg) rotateY(20deg) rotate(20deg) translateZ(2rem) translateY(-4vw) translateX(1vw);
+    transition: all 0.25s ease-in-out;
+}
+
+#keys:hover #keys-front {
+    bottom: unset;
+    top: 0;
+    transform: rotateX(90deg) translateZ(0.33rem) translateY(-1vh);
+}
+
 /* ship ------------------------------------------ */
 #cvn {
 
@@ -654,7 +744,6 @@ h1:hover span:nth-child(even) {
 }
 
 .contact {
-    position: absolute;
     z-index: 2;
     font-size: 2rem;
     color: blanchedalmond;
@@ -746,7 +835,6 @@ h1:hover span:nth-child(even) {
 /* certification ------------------------------ */
 #cert {
     height: 20vh;
-    position: absolute;
     right: 30vw;
     top: 2.5vh;
     display: flex;
@@ -772,10 +860,8 @@ h1:hover span:nth-child(even) {
 #window {
     height: 50vh;
     width: 35vw;
-    position: absolute;
     top: 19.5%;
     right: -20vw;
-    transform-style: preserve-3d;
     transform: rotateY(90deg) translateX(25.5%);
 }
 
@@ -785,7 +871,7 @@ h1:hover span:nth-child(even) {
     top: 0vh;
     right: -50vw;
     transform-style: preserve-3d;
-    transform: rotateY(0deg) translateZ(-66vh);
+    transform: rotateY(0deg) translateZ(-68vh);
 }
 
 .window-frame {
@@ -862,10 +948,8 @@ h1:hover span:nth-child(even) {
 #fan {
     height: 12vh;
     width: 18rem;
-    position: absolute;
     top: -9%;
     left: 50%;
-    transform-style: preserve-3d;
     transform: translateZ(-40vh) translateX(-50%);
     display: flex;
     justify-content: center;
