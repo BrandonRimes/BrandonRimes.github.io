@@ -18,10 +18,10 @@ body {
     font-family: averia serif libre;
 }
 
-/* main {
+main {
     filter: opacity(0);
     animation: fade-in 1s ease-in-out 3s forwards;
-} */
+}
 
 @keyframes fade-in {
     0% {
@@ -419,7 +419,7 @@ body {
 }
 
 #book-react {
-    left: 10rem;
+    left: 9.75rem;
     bottom: 2.3rem;
     transform: translateZ(0rem) rotate(-15deg);
 }

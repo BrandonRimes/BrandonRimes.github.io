@@ -11,7 +11,7 @@ for (var i = 0; i < objects.length; i++) {
 
 for (var i = 0; i < surfaces.length; i++) {
     surfaces[i].addEventListener("mouseover", function() {
-        word.innerHTML = "<h4>Welcome!<br>I'm Brandon Rimes, Software Developer.<br>I designed this space to display my<br>variegated experience and interests,<br>with intent to be more interactive<br>and less verbose.<br>There is more to come...<br>Enjoy!</h4>";
+        word.innerHTML = "<h4>Welcome!<br>I'm Brandon Rimes, Software Developer.<br>I designed this space to display my<br>variegated experience and interests,<br>with intent to be more interactive<br>and less verbose.<br>Samples of my work are on the bookshelf.<br>There is more to come...<br>Enjoy!</h4>";
     });
 }
 
