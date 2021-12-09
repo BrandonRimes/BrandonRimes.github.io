@@ -5,7 +5,7 @@ Composer: brndn */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -608,6 +608,56 @@ main {
     bottom: unset;
     top: 0;
     transform: rotateX(90deg) translateZ(0.33rem) translateY(-1vh);
+}
+
+/* smash ----------------------------------------- */
+#smash {
+    height: 10vh;
+    width: 18vh;
+    top: 7vh;
+    right: 5vh;
+    transform: rotateX(10deg) translateZ(2rem);
+    transition: all 0.25s ease-in-out;
+}
+
+.smash {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+#smash-face {
+    height: 100%;
+    width: 100%;
+    background-image: url("images/smash.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 28%;
+}
+
+#smash:hover {
+    animation: smash-hover .5s ease-in-out infinite;
+}
+
+@keyframes smash-hover {
+    0% {
+        transform: rotateX(0deg) translateZ(3rem) translateY(-1vh) rotate(0deg);
+    }
+    20% {
+        transform: rotateX(-1deg) translateZ(3rem) translateY(-1.33vh) rotate(-1deg);
+    }
+    40% {
+        transform: rotateX(1deg) translateZ(3rem) translateY(-1.66vh) rotate(0deg);
+    }
+    60% {
+        transform: rotateX(1deg) translateZ(3rem) translateY(-1.66vh) rotate(1deg);
+    }
+    80% {
+        transform: rotateX(1deg) translateZ(3rem) translateY(-1.66vh) rotate(0deg);
+    }
+    100% {
+        transform: rotateX(0deg) translateZ(3rem) translateY(-1vh) rotate(0deg);
+    }
 }
 
 /* ship ------------------------------------------ */
