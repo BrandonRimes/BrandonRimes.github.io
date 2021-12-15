@@ -741,6 +741,7 @@ h1:hover span:nth-child(even) {
 #word {
     position: absolute;
     height: auto;
+    max-width: 50vw;
     right: 13rem;
     bottom: 9rem;
     padding: 0 1rem;
@@ -1003,21 +1004,8 @@ h1:hover span:nth-child(even) {
     transform: translateZ(-40vh) translateX(-50%);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
-
-/* #fan:hover #fan-blades {
-    animation: fan-hover 5s ease-in-out infinite;
-}
-
-@keyframes fan-hover {
-    0% {
-        transform: translateY(3rem) rotateX(90deg) rotate(0deg);
-    }
-
-    100% {
-        transform: translateY(3rem) rotateX(90deg) rotate(3600deg);
-    }
-} */
 
 .fan {
     position: absolute;
