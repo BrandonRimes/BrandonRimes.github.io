@@ -1,11 +1,354 @@
 /* 01 Mar 2021
 Personal Portfolio
-Composer: brndn */
+Composer: Brandon Rimes */
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --shadow: inset -1px -1px 2px black,
+        inset 2px 2px 5px white,
+        -2px -2px 5px white,
+        1px 1px 2px black;
+    --invertShadow: inset -1px -1px 2px black,
+        inset 1px 1px 2px black;
+    --border: 1px solid deeppink;
+    --copperLight: rgba(255, 222, 175, 0.5);
+    --copperDark: rgba(0, 0, 0, 0.75);
+}
+
+/* mobile view -------------------------------- */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: averia serif libre;
+    overflow: hidden;
+}
+
+#mobile {
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    position: fixed;
+    height: 80vh;
+    width: auto;
+    left: 0;
+    top: 11%;
+    z-index: -10;
+}
+
+#mobile section {
+    width: 100%;
+    position: relative;
+}
+
+#mobile-header,
+#mobile-footer {
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("images/copper.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#mobile-header {
+    box-shadow: inset 0 -2px 2px var(--copperDark),
+        inset 0 -5px 5px var(--copperLight);
+}
+
+#mobile-footer {
+    box-shadow: inset 0 2px 2px var(--copperDark),
+        inset 0 5px 5px var(--copperLight);
+}
+
+#mobile h1,
+#mobile h2,
+#mobile h3 {
+    background-image: url("images/copper.png");
+    background-size: cover;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(1px 1px 0px var(--copperDark))
+    drop-shadow(-1px -1px 0px var(--copperLight));
+}
+
+#mobile h1:hover,
+#mobile h2:hover {
+    filter: drop-shadow(-1px -1px 0px var(--copperDark))
+        drop-shadow(1px 1px 0px var(--copperLight));
+    background-position: center;
+}
+
+#mobile h1 {
+    font-size: 2rem;
+}
+
+#mobile h2 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+
+#mobile h3 {
+    text-align: center;
+    letter-spacing: 2px;
+    pointer-events: none;
+}
+
+#mobile h4 {
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+#mobile h4::before,
+#mobile h4::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    width: 2rem;
+    background-color: black;
+}
+
+#mobile h4::before {
+    left: -2.5rem;
+    background: linear-gradient(to left, black, transparent 75%);
+}
+
+#mobile h4::after {
+    right: -2.5rem;
+    background: linear-gradient(to right, black, transparent 75%);
+}
+
+#mobile h5 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+#mobile p {
+    width: 100%;
+    margin-top: 1rem;
+    background-position: top;
+    background-size: unset;
+    background-repeat: repeat;
+    color: #1e1e1e;
+    font-family: serif;
+    font-size: 1.25rem;
+    text-shadow: 0px 0px 2px white;
+    line-height: 1.5rem;
+}
+
+#mobile-main {
+    height: 78%;
+    padding: 1rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#info {
+    background-color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    height: 66%;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: inset 0 0 10px 2px black,
+        inset 0 0 5px 10px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#infos {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 35%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+.infos {
+    width: 9rem;
+    height: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/copper.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -1px -1px 3px 1px var(--copperDark),
+        inset 1px 1px 3px 3px var(--copperLight);
+}
+
+.infos:hover h3 {
+    filter: drop-shadow(1px 1px 0px var(--copperLight))
+        drop-shadow(-1px -1px 0px var(--copperDark));
+}
+
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: inset -1px 0 5px -2px white,
+        inset 1px 0 5px -2px black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: url("images/copper.png");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: inset -2px -1px 3px black,
+        inset 1px 1px 4px white;
+}
+
+#info img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.closingP {
+    width: 100%;
+    text-align: right;
+}
+
+#info a {
+    text-decoration: none;
+}
+
+.subcat {
+    position: relative;
+    padding-top: 2rem;
+}
+
+.subcat::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 1rem;
+    background: radial-gradient(black 0%, transparent 75% );
+}
+
+.subcat::after {
+    content: '';
+    position: absolute;
+    bottom: 0.4rem;
+    transform: translateX(0.25rem);
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 7px 0px 0 black,
+    14px 0 0 black;
+    animation: dotdot 1s linear infinite;
+}
+
+@keyframes dotdot {
+    0% {
+        transform: translateX(0.25rem) translateY(0rem);
+        box-shadow: 7px 0 0 black,
+        14px 0 0 black;
+    }
+    20% {
+        transform: translateX(0.25rem) translateY(-2px);
+        box-shadow: 7px 2px 0 black,
+        14px 2px 0 black;
+    }
+    40% {
+        transform: translateX(0.25rem) translateY(-4px);
+        box-shadow: 7px 0px 0 black,
+        14px 2px 0 black;
+    }
+    60% {
+        transform: translateX(0.25rem) translateY(-2px);
+        box-shadow: 7px -2px 0 black,
+        14px -2px 0 black;
+    }
+    80% {
+        transform: translateX(0.25rem) translateY(0rem);
+        box-shadow: 7px 0px 0 black,
+        14px -2px 0 black;
+    }
+    100% {
+        transform: translateX(0.25rem) translateY(0rem);
+        box-shadow: 7px 0px 0 black,
+        14px 0px 0 black;
+    }
+}
+
+#tech {
+    width: 100%;
+}
+
+#me {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40%;
+    width: 60%;
+    background-image: url("images/self-cutout.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    clip-path: polygon(36% 1%, 55% 1%, 78% 34%, 100% 70%, 100% 100%, 0 100%, 0% 60%, 20% 34%);
+}
+
+#mobile-footer {
+    height: 10%;
+    flex-direction: row;
+    position: relative;
+}
+
+#mobile-footer a {
+    text-decoration: none;
+    height: 100%;
+}
+
+.mobile-footer-links {
+    width: 33.33vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 2px 0px var(--copperDark),
+        inset 0 0 3px 2px var(--copperLight);
+}
+
+main {
+    display: none;
+}
+
+/* 768px + view ------------------------------- */
+@media (min-width: 768px) {
+
+#mobile {
+    display: none;
 }
 
 body {
@@ -19,6 +362,7 @@ body {
 }
 
 main {
+    display: contents;
     filter: opacity(0);
     animation: fade-in 1s ease-in-out 3s forwards;
 }
@@ -34,7 +378,7 @@ main {
 }
 
 #scene {
-    width: 200vw;
+    width: 100vw;
     height: 100vh;
     max-height: 100vh;
     perspective: 1000px;
@@ -98,13 +442,12 @@ main {
 }
 /* bookshelf ------------------------------------- */
 #bookshelf {
-    width: 33%;
+    width: 25vw;
     height: 66%;
     position: absolute;
     bottom: 15%;
-    right: 1vw;
     transform-style: preserve-3d;
-    transform: translateZ(-40vh) translateX(-10vw) rotateY(-25deg);
+    transform: translateZ(-45vh);
     box-shadow: inset 0rem 0rem 10rem white;
 }
 
@@ -659,65 +1002,12 @@ main {
     }
 }
 
-/* ship ------------------------------------------ */
-#cvn {
-
-}
-
-.cvn {
-
-}
-
-#cvn-deck {
-
-}
-
-#cvn-fwd {
-    
-}
-
-#cvn-aft {
-    
-}
-
-#cvn-port {
-    
-}
-
-#cvn-stbd {
-    
-}
-
-#cvn-twr {
-    
-}
-
-#cvn-twr-deck {
-    
-}
-
-#cvn-twr-fwd {
-    
-}
-
-#cvn-twr-aft {
-    
-}
-
-#cvn-twr-port {
-    
-}
-
-#cvn-twr-stbd {
-    
-}
 /* logo ---------------------------------------------- */
 h1 {
     margin: 0em;
-    font-size: 3rem;
+    font-size: 5rem;
     color: blanchedalmond;
     text-shadow: 0rem 0rem 10px black;
-    transform: translate(-50vw, -32vh)
 }
 
 h1 span {
@@ -743,7 +1033,7 @@ h1:hover span:nth-child(even) {
     max-width: 50vw;
     right: 13rem;
     bottom: 9rem;
-    padding: 0 1rem;
+    padding: 1rem;
     z-index: 3;
     display: flex;
     justify-content: center;
@@ -794,6 +1084,7 @@ h1:hover span:nth-child(even) {
 }
 
 .contact {
+    position: fixed;
     z-index: 2;
     font-size: 2rem;
     color: blanchedalmond;
@@ -877,16 +1168,15 @@ h1:hover span:nth-child(even) {
 }
 /* rug ---------------------------------------- */
 #rug {
-    width: 50vh;
-    height: 100vw;
+    height: 50vw;
     margin-top: 50vh;
     transform: rotate(-88deg);
 }
 /* certification ------------------------------ */
 #cert {
     height: 20vh;
-    right: 30vw;
-    top: 2.5vh;
+    left: 15vw;
+    top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -906,6 +1196,47 @@ h1:hover span:nth-child(even) {
     height: 100%;
     box-shadow: -0.5rem 0.5rem 1rem;
 }
+
+#cert:hover #cert-photo {
+    height: 33vw;
+    transform: translateX(50vw) translateY(33vh);
+    transition: all 0.25s ease-in-out;
+    animation: shadowphase 3s linear infinite;
+}
+
+@keyframes shadowphase {
+    0% {
+        box-shadow: 2rem -2rem 10rem hotpink,
+        -2rem 2rem 10rem lightgreen,
+        2rem 2rem 10rem orange,
+        -2rem -2rem 10rem aqua;
+    }
+    25% {
+        box-shadow: -2rem -2rem 10rem lightgreen,
+        2rem 2rem 10rem hotpink,
+        -2rem 2rem 10rem orange,
+        2rem -2rem 10rem aqua;
+    }
+    50% {
+        box-shadow: -2rem -2rem 10rem orange,
+        2rem -2rem 10rem lightgreen,
+        2rem 2rem 10rem aqua,
+        -2rem 2rem 10rem hotpink;
+    }
+    75% {
+        box-shadow: -2rem 2rem 10rem aqua,
+        2rem -2rem 10rem orange,
+        -2rem -2rem 10rem hotpink,
+        2rem 2rem 10rem lightgreen;
+    }
+    100% {
+        box-shadow: 2rem -2rem 10rem hotpink,
+        -2rem 2rem 10rem lightgreen,
+        -2rem -2rem 10rem aqua,
+        2rem 2rem 10rem orange;
+    }
+}
+
 /* window ------------------------------------- */
 #window {
     height: 50vh;
@@ -1072,101 +1403,9 @@ h1:hover span:nth-child(even) {
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 
-/* responsive 768px --------------------------- */
-@media (min-width: 768px) {
+} /* end 768px + view */
 
-    #scene {
-        width: 100vw;
-        height: 100vh;
-    }
-    
-    #back-wall {
-        align-items: center;
-    }
-
-    #bookshelf {
-        width: 25vw;
-        right: unset;
-        transform: translateZ(-45vh);
-    }
-
-    h1 {
-        font-size: 5rem;
-        transform: unset;
-    }
-    
-    .contact {
-        position: fixed;
-    }
-
-    #email {
-        right: 4.5rem;
-        bottom: 15rem;
-    }
-
-    #linkedin {
-        right: 3.25rem;
-        bottom: 20rem;
-    }
-
-    #github {
-        right: 4rem;
-        bottom: 25rem;
-    }
-
-    #rug {
-        width: unset;
-        height: 50vw;
-    }
-
-    #cert {
-        right: unset;
-        left: 15vw;
-        top: 5vh;
-    }
-
-    #cert:hover #cert-photo {
-        height: 33vw;
-        transform: translateX(50vw) translateY(33vh);
-        transition: all 0.25s ease-in-out;
-        animation: shadowphase 3s linear infinite;
-    }
-
-    @keyframes shadowphase {
-        0% {
-            box-shadow: 2rem -2rem 10rem hotpink,
-            -2rem 2rem 10rem lightgreen,
-            2rem 2rem 10rem orange,
-            -2rem -2rem 10rem aqua;
-        }
-        25% {
-            box-shadow: -2rem -2rem 10rem lightgreen,
-            2rem 2rem 10rem hotpink,
-            -2rem 2rem 10rem orange,
-            2rem -2rem 10rem aqua;
-        }
-        50% {
-            box-shadow: -2rem -2rem 10rem orange,
-            2rem -2rem 10rem lightgreen,
-            2rem 2rem 10rem aqua,
-            -2rem 2rem 10rem hotpink;
-        }
-        75% {
-            box-shadow: -2rem 2rem 10rem aqua,
-            2rem -2rem 10rem orange,
-            -2rem -2rem 10rem hotpink,
-            2rem 2rem 10rem lightgreen;
-        }
-        100% {
-            box-shadow: 2rem -2rem 10rem hotpink,
-            -2rem 2rem 10rem lightgreen,
-            -2rem -2rem 10rem aqua,
-            2rem 2rem 10rem orange;
-        }
-    }
-
-}
-/* responsive 1024px ----------------------------- */
+/* 1024px + view ----------------------------- */
 @media (min-width: 1024px) {
     
 }
