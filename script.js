@@ -244,6 +244,7 @@ const infoCategories = {
 
 infos.addEventListener("click", (e) => {
     info.innerHTML = infoCategories[e.target.id] ?? infoCategories["hello"];
+    info.scrollTo(0,0);
 });
 
 me.addEventListener("click", (e) => {
