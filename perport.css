@@ -344,8 +344,8 @@ main {
     display: none;
 }
 
-/* 768px + view ------------------------------- */
-@media (min-width: 768px) {
+/* desktop view ------------------------------- */
+@media (min-width: 950px) {
 
 #mobile {
     display: none;
