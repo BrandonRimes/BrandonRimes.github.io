@@ -74,6 +74,8 @@ const educationInfo = `
         <br>
         JavaScript, HTML5 / CSS3, React.js, Node.js, MongoDB, Express.
         <br>
+        Data structures and algorithms.
+        <br>
         Extensive team-programming experience with thorough use of Git, GitHub, and CLI.
         <br>
         - 2021
@@ -150,7 +152,7 @@ const experienceInfo = `
         Self employed, Licensed Massage Therapist.
     </p>
     <p>
-        Utilizing professional cummunication training to achieve clients' wellness goals. I practiced various modalities, primarily treating injury recovery. I organized advertising, media, scheduling, treatment plans, client notes, locations, and payments.
+        Utilizing professional communication training to achieve clients' wellness goals. I practiced various modalities, primarily treating injury recovery. I organized advertising, media, scheduling, treatment plans, client notes, locations, and payments.
     </p>
     <p>
         Awareness - Details - Communication
