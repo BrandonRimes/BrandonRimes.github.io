@@ -215,17 +215,50 @@ const moreInfo = `
     </p>
     <h4>Tech & Tools</h4>
     <div id='tech'>
-        <p id='tech-js'>JavaScript</p>
-        <p id='tech-python'>Python</p>
-        <p id='tech-html'>Html5</p>
-        <p id='tech-css'>Css3</p>
-        <p id='tech-react'>React.js</p>
-        <p id='tech-node'>Node.js</p>
-        <p id='tech-three'>Three.js</p>
-        <p id='tech-vue'>Vue.js</p>
-        <p id='tech-django'>Django</p>
-        <p id='tech-mongo'>MongoDB</p>
-        <p id='tech-bootstrap'>Bootstrap</p>
+        <div id='tech-js' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'>
+            <p>JavaScript</p>
+        </div>
+        <div id='tech-python' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'>
+            <p>Python</p>
+        </div>
+        <div id='tech-html' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'>
+            <p>Html5</p>
+        </div>
+        <div id='tech-css' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'>
+            <p>Css3</p>
+        </div>
+        <div id='tech-react' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'>
+            <p>React.js</p>
+        </div>
+        <div id='tech-node' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'>
+            <p>Node.js</p>
+        </div>
+        <div id='tech-three' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg'>
+            <p>Three.js</p>
+        </div>
+        <div id='tech-vue' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'>
+            <p>Vue.js</p>
+        </div>
+        <div id='tech-django' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg'>
+            <p>Django</p>
+        </div>
+        <div id='tech-mongo' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'>
+            <p>MongoDB</p>
+        </div>
+        <div id='tech-bootstrap' class='techs'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'>
+            <p>Bootstrap</p>
+        </div>
     </div>
 
     <p class='subcat'>Background</p>
@@ -261,4 +294,24 @@ me.addEventListener("click", (e) => {
 
 mobileHeader.addEventListener("click", (e) => {
     info.innerHTML = infoCategories["hello"];
+});
+
+// tech logo motion
+
+info.addEventListener("scroll", (e) => {
+
+    const techs = [...document.getElementsByClassName("techs")];
+    const techLogos = [...document.getElementsByClassName("techLogo")];
+
+    for(let logo of techLogos) {
+        let y = logo.getBoundingClientRect().y;
+        let x = logo.getBoundingClientRect().x;
+        if(y > 280 && y < 420) {
+            logo.style.transform = `translateX(${430 - y}px) scale(${1 + x/200}) translateY(33%)`;
+        } else if(y < 280 && y > 150) {
+            logo.style.transform = `translateX(${y - 140}px) scale(${1 + x/200}) translateY(33%)`;
+        } else {
+            logo.style.transform = `translateY(33%)`;
+        }
+    }
 });
