@@ -341,7 +341,7 @@ body {
 }
 
 main {
-    display: none;
+    visibility: hidden;
 }
 
 /* desktop view ------------------------------- */
@@ -362,7 +362,7 @@ body {
 }
 
 main {
-    display: contents;
+    visibility: visible;
     filter: opacity(0);
     animation: fade-in 1s ease-in-out 3s forwards;
 }
