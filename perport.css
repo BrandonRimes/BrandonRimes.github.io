@@ -37,6 +37,30 @@ body {
     overflow: hidden;
 }
 
+#coffeeGif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url("images/coffee-zoom.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+    animation: fade-out 1s ease-in-out 3s forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        filter: opacity(100%);
+    }
+
+    100% {
+        filter: opacity(0);
+    }
+}
+
 #video {
     position: fixed;
     height: 80vh;
@@ -430,26 +454,34 @@ main {
 body {
     width: 100vw;
     height: 100vh;
-    background: url("images/coffee-zoom.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     font-family: averia serif libre;
 }
 
 main {
     display: contents;
-    filter: opacity(0);
+}
+
+#coffeeGif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url("images/coffee-zoom.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
     animation: fade-in 1s ease-in-out 3s forwards;
 }
 
 @keyframes fade-in {
     0% {
-        filter: opacity(0);
+        filter: opacity(100%);
     }
 
     100% {
-        filter: opacity(100%);
+        filter: opacity(0);
     }
 }
 
