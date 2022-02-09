@@ -141,10 +141,7 @@ body {
 #mobile p {
     width: 100%;
     margin-top: 1rem;
-    background-position: top;
-    background-size: unset;
-    background-repeat: repeat;
-    color: #1e1e1e;
+    color: #1E1E1E;
     font-family: serif;
     font-size: 1.25rem;
     text-shadow: 0px 0px 2px white;
@@ -304,6 +301,84 @@ body {
 
 #tech {
     width: 100%;
+}
+
+#tech p {
+    position: relative;
+    padding-left: 2rem;
+}
+
+#tech p::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1.5rem;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+#tech-js::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg");
+    animation: techroll 3s linear infinite alternate;
+}
+
+#tech-python::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg");
+    animation: techroll 3s linear 0.25s infinite alternate;
+}
+
+#tech-html::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg");
+    animation: techroll 3s linear 0.5s infinite alternate;
+}
+
+#tech-css::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg");
+    animation: techroll 3s linear 0.75s infinite alternate;
+}
+
+#tech-react::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg");
+    animation: techroll 3s linear 1s infinite alternate;
+}
+
+#tech-vue::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg");
+    animation: techroll 3s linear 1.25s infinite alternate;
+}
+
+#tech-three::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg");
+    animation: techroll 3s linear 1.5s infinite alternate;
+}
+
+#tech-django::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg");
+    animation: techroll 3s linear 1.75s infinite alternate;
+}
+
+@keyframes techroll {
+    0% {
+        transform: rotate(0deg) scale(1);
+        left: 0;
+    }
+    40% {
+        transform: rotate(0deg) scale(1);
+        left: 0;
+    }
+    60% {
+        transform: rotate(360deg) scale(1.5);
+        left: 46%;
+    }
+    100% {
+        transform: rotate(360deg) scale(1.5);
+        left: 46%;
+    }
+}
+
+#mobile .fineprint {
+    font-size: smaller;
 }
 
 #me {

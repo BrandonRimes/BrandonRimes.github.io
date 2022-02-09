@@ -233,6 +233,9 @@ const moreInfo = `
         I enjoy being immersed in nature, parenting, gardening, playing various musical instruments, creating ornate objects (furniture, art, tools, etc.), traveling, learning, teaching, connecting with and helping people, and sharing these things with my fellow humans.
     </p>
 
+    <p class='fineprint'>
+        * Tech logos from <a href='https://devicon.dev/'>Devicon</a>
+    </p>
     <p class='closingP'>☕️</p>
 `;
 
