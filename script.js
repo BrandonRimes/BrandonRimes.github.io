@@ -220,9 +220,12 @@ const moreInfo = `
         <p id='tech-html'>Html5</p>
         <p id='tech-css'>Css3</p>
         <p id='tech-react'>React.js</p>
-        <p id='tech-vue'>Vue.js</p>
+        <p id='tech-node'>Node.js</p>
         <p id='tech-three'>Three.js</p>
+        <p id='tech-vue'>Vue.js</p>
         <p id='tech-django'>Django</p>
+        <p id='tech-mongo'>MongoDB</p>
+        <p id='tech-bootstrap'>Bootstrap</p>
     </div>
 
     <p class='subcat'>Background</p>

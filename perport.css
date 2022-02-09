@@ -369,8 +369,8 @@ body {
     animation: techroll 3s linear 1s infinite alternate;
 }
 
-#tech-vue::before {
-    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg");
+#tech-node::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg");
     animation: techroll 3s linear 1.25s infinite alternate;
 }
 
@@ -379,9 +379,24 @@ body {
     animation: techroll 3s linear 1.5s infinite alternate;
 }
 
+#tech-vue::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg");
+    animation: techroll 3s linear 1.75s infinite alternate;
+}
+
 #tech-django::before {
     background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg");
-    animation: techroll 3s linear 1.75s infinite alternate;
+    animation: techroll 3s linear 2s infinite alternate;
+}
+
+#tech-mongo::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg");
+    animation: techroll 3s linear 2.25s infinite alternate;
+}
+
+#tech-bootstrap::before {
+    background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg");
+    animation: techroll 3s linear 2.5s infinite alternate;
 }
 
 @keyframes techroll {
