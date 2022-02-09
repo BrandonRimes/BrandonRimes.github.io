@@ -505,7 +505,7 @@ main {
 }
 
 #back-wall {
-    background-image: url("images/back-wall.jpg");
+    background-image: url("images/back-wall-copy.jpg");
     transform: translateZ(-65vh) translateY(-15%);
     display: flex;
     justify-content: center;
