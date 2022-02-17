@@ -1,6 +1,10 @@
 const surfaces = document.getElementsByClassName("surfaces");
 const objects = document.getElementsByClassName("objects");
 const fan = document.getElementById("fan");
+const wordBubble = document.getElementById("word");
+const mobileView = document.getElementById("mobile");
+const mobileViewToggle = document.getElementById('mobile-view-toggle');
+const desktopViewCloseBtn = document.getElementById("desktopViewCloseBtn");
 
 // word bubble hover events -----------------------------------------
 for (var i = 0; i < objects.length; i++) {
@@ -11,7 +15,7 @@ for (var i = 0; i < objects.length; i++) {
 
 for (var i = 0; i < surfaces.length; i++) {
     surfaces[i].addEventListener("mouseover", function() {
-        word.innerHTML = "<h4>Welcome!<br>I'm Brandon Rimes, Software Developer.<br>I designed this space to display my variegated experience<br>and interests, with intent to be more interactive and less verbose.<br>Samples of my work are on the bookshelf.<br>There is more to come...<br>Enjoy!</h4>";
+        word.innerHTML = `<h4>Welcome!<br>I'm Brandon Rimes, Software Developer.<br>I designed this space to display my variegated experience<br>and interests, with intent to be more interactive and less verbose.<br><span id='mobile-view-toggle'>Click here to toggle the mobile version.</span> It has more words and fewer pictures.<br>Samples of my work are on the bookshelf.<br>There is more to come...<br>Enjoy!</h4>`;
     });
 }
 
@@ -31,6 +35,18 @@ fan.addEventListener("click", function() {
     }
     
     document.getElementById("fan-blades").style.animationDuration = fanSpeed;
+})
+
+// desktop display of mobile view -------------------------------
+wordBubble.addEventListener("click", (e) => {
+    let width = window.getComputedStyle(mobileView).getPropertyValue("width");
+    if(e.target.id == "mobile-view-toggle") {
+        width == "0px" ? mobileView.style.width = "33vw" : mobileView.style.width = "0px"
+    }
+})
+
+desktopViewCloseBtn.addEventListener("click", () => {
+    mobileView.style.width = "0px";
 })
 
 // mobile view ---------------------------------------

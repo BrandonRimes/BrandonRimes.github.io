@@ -35,6 +35,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 #coffeeGif {
@@ -73,9 +74,9 @@ body {
 
 #mobile section {
     width: 100%;
-    position: relative;
 }
 
+/* mobile header / footer ------------------------ */
 #mobile-header,
 #mobile-footer {
     height: 12%;
@@ -85,17 +86,27 @@ body {
     align-items: center;
     background-image: url("images/copper.png");
     background-size: cover;
-    background-position: center;
 }
 
 #mobile-header {
+    position: relative;
+    background-position: bottom;
     box-shadow: inset 0 -2px 2px var(--copperDark),
         inset 0 -5px 5px var(--copperLight);
 }
 
 #mobile-footer {
+    background-position: center;
     box-shadow: inset 0 2px 2px var(--copperDark),
         inset 0 5px 5px var(--copperLight);
+}
+
+#mobile-header:hover {
+    background-position: center;
+}
+
+#mobile-footer:hover {
+    background-position: bottom;
 }
 
 #mobile h1,
@@ -107,7 +118,17 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(1px 1px 0px var(--copperDark))
-    drop-shadow(-1px -1px 0px var(--copperLight));
+        drop-shadow(-1px -1px 0px var(--copperLight));
+}
+
+#mobile h1 {
+    font-size: 2rem;
+    text-shadow: unset;
+}
+
+#mobile h2 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
 }
 
 #mobile h1:hover,
@@ -117,15 +138,7 @@ body {
     background-position: center;
 }
 
-#mobile h1 {
-    font-size: 2rem;
-}
-
-#mobile h2 {
-    font-size: 1.4rem;
-    letter-spacing: 2px;
-}
-
+/* mobile main section (info box) ------------ */
 #mobile h3 {
     text-align: center;
     letter-spacing: 2px;
@@ -175,6 +188,7 @@ body {
 }
 
 #mobile-main {
+    position: relative;
     height: 78%;
     padding: 1rem;
     line-height: 1.25rem;
@@ -198,6 +212,7 @@ body {
     align-items: center;
 }
 
+/* info box buttons ----------------------- */
 #infos {
     position: absolute;
     right: 0;
@@ -212,6 +227,7 @@ body {
 }
 
 .infos {
+    position: relative;
     width: 9rem;
     height: 2rem;
     border-radius: 1rem;
@@ -225,11 +241,90 @@ body {
         inset 1px 1px 3px 3px var(--copperLight);
 }
 
-.infos:hover h3 {
-    filter: drop-shadow(1px 1px 0px var(--copperLight))
-        drop-shadow(-1px -1px 0px var(--copperDark));
+/* .infos::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0.5rem;
+    left: 4rem;
+    transform: rotate(45deg);
+    z-index: -1;
+    box-shadow: 0rem 0rem 5px 10px var(--copperLight),
+                -2rem 2rem 5px 10px var(--copperLight),
+                2rem -2rem 5px 10px var(--copperLight);
+} */
+
+.infos:hover {
+    background-position: bottom;
+    animation: shadowMotion 1s linear infinite;
 }
 
+/* .infos:hover::before {
+    background-image: linear-gradient(to left, transparent, var(--copperLight), transparent, var(--copperLight), transparent, var(--copperLight), transparent, var(--copperLight), transparent, var(--copperLight), transparent, var(--copperLight), transparent, var(--copperLight), transparent, var(--copperLight));
+    background-size: 29rem 11rem;
+    background-repeat: no-repeat;
+    animation: btnBackground 1s linear infinite;
+} */
+
+/* @keyframes btnBackground {
+    0% {
+        box-shadow: 0rem 0rem 10px 0px var(--copperLight),
+                    -3.5rem 3.5rem 10px 0px var(--copperLight),
+                    3.5rem -3.5rem 10px 0px var(--copperLight);
+    }
+    25% {
+        box-shadow: 0rem 0rem 10px 0px var(--copperLight),
+        -3.5rem 0rem 10px 0px var(--copperLight),
+        3.5rem 0rem 10px 0px var(--copperLight);
+    }
+    50% {
+        box-shadow: 0rem 0rem 10px 0px var(--copperLight),
+        -3.5rem 0rem 10px 0px var(--copperLight),
+        3.5rem 0rem 10px 0px var(--copperLight);
+    }
+    75% {
+        box-shadow: 0rem 0rem 10px 0px var(--copperLight),
+        -3.5rem 0rem 10px 0px var(--copperLight),
+        3.5rem 0rem 10px 0px var(--copperLight);
+    }
+    100% {
+        box-shadow: 0rem 0rem 10px 0px var(--copperLight),
+        -3.5rem 0rem 10px 0px var(--copperLight),
+        3.5rem 0rem 10px 0px var(--copperLight);
+    }
+} */
+
+@keyframes shadowMotion {
+    0% {
+        box-shadow: -2px -2px 5px 1px var(--copperLight),
+            inset 1px 1px 3px 3px var(--copperLight);
+    }
+    25% {
+        box-shadow: -2px 2px 5px 1px var(--copperLight),
+            inset 1px -1px 3px 3px var(--copperLight);
+    }
+    50% {
+        box-shadow: 2px 2px 5px 1px var(--copperLight),
+            inset -1px -1px 3px 3px var(--copperLight);
+    }
+    75% {
+        box-shadow: 2px -2px 5px 1px var(--copperLight),
+            inset -1px 1px 3px 3px var(--copperLight);
+    }
+    100% {
+        box-shadow: -2px -2px 5px 1px var(--copperLight),
+            inset 1px 1px 3px 3px var(--copperLight);
+    }
+}
+
+#mobile .infos:hover h3 {
+    filter: drop-shadow(1px 1px 0px var(--copperLight))
+    drop-shadow(-1px -1px 0px var(--copperDark));
+    background-position: top;
+}
+
+/* info box scroll bar ----------------------- */
 ::-webkit-scrollbar {
     width: 0.75rem;
 }
@@ -325,6 +420,7 @@ body {
     }
 }
 
+/* tech logos ------------------------------ */
 #tech {
     width: 100%;
 }
@@ -335,6 +431,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     height: 3rem;
+    z-index: 1;
 }
 
 #info .techs img {
@@ -342,9 +439,11 @@ body {
     height: 2rem;
     width: 2rem;
     transform: translateY(33%);
+    z-index: -1;
 }
 
 .techs p {
+    mix-blend-mode: color-dodge;
     margin-left: 0.25rem;
 }
 
@@ -367,23 +466,29 @@ body {
 
 #mobile-footer {
     height: 10%;
+    width: 100%;
     flex-direction: row;
-    position: relative;
 }
 
 #mobile-footer a {
     text-decoration: none;
     height: 100%;
+    width: 33.33%;
 }
 
 .mobile-footer-links {
-    width: 33.33vw;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: inset 0 0 2px 0px var(--copperDark),
         inset 0 0 3px 2px var(--copperLight);
+}
+
+#desktopViewCloseBtn {
+    display: none;
+    position: absolute;
 }
 
 main {
@@ -393,14 +498,92 @@ main {
 /* desktop view ------------------------------- */
 @media (min-width: 950px) {
 
+/* display of mobile version on desktop ------- */
 #mobile {
-    display: none;
+    width: 0vw;
+    z-index: 100;
+    overflow: hidden;
+    transition: width 0.25s linear;
+    animation: pageSplit 1s linear infinite alternate;
 }
 
+@keyframes pageSplit {
+    0% {
+        filter: drop-shadow(1px 0 2px deeppink)
+            drop-shadow(1px 0 2px deepskyblue);
+    }
+    100% {
+        filter: drop-shadow(1px 0 2px deepskyblue)
+            drop-shadow(1px 0 2px deeppink);
+    }
+}
+
+#video {
+    position: absolute;
+    top: 0;
+}
+
+#mobile-view-toggle:hover {
+    color: #f0a608;
+    cursor: pointer;
+}
+
+#desktopViewCloseBtn {
+    display: block;
+    top: 50%;
+    right: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 1px solid deeppink;
+    transform: translateY(-50%);
+    cursor: pointer;
+    animation: threeDee 1s linear infinite;
+}
+
+@keyframes threeDee {
+    0% {
+        filter: drop-shadow(1px 1px 0px deepskyblue)
+            drop-shadow(0 0 5px white);
+    }
+    25% {
+        filter: drop-shadow(-1px 1px 0px deepskyblue)
+            drop-shadow(0 0 5px white);
+    }
+    50% {
+        filter: drop-shadow(-1px -1px 0px deepskyblue)
+            drop-shadow(0 0 5px white);
+    }
+    75% {
+        filter: drop-shadow(1px -1px 0px deepskyblue)
+            drop-shadow(0 0 5px white);
+    }
+    100% {
+        filter: drop-shadow(1px 1px 0px deepskyblue)
+            drop-shadow(0 0 5px white);
+    }
+}
+
+#desktopViewCloseBtn p {
+    line-height: unset;
+    width: unset;
+    margin-top: 0.25rem;
+    color: deeppink;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    pointer-events: none;
+    text-shadow: unset;
+}
+
+/* start desktop main content ------------------ */
 body {
     width: 100vw;
     height: 100vh;
     font-family: averia serif libre;
+    display: flex;
+    flex-direction: row;
 }
 
 main {
@@ -427,7 +610,7 @@ main {
 }
 /* room ----------------------------------- */
 #room {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
@@ -637,6 +820,7 @@ main {
 
 .books:hover {
     animation: book-move 0.25s ease-in-out forwards;
+    cursor: grab;
 }
 
 @keyframes book-move {
@@ -1044,25 +1228,26 @@ main {
 }
 
 /* logo ---------------------------------------------- */
-h1 {
+main h1 {
     margin: 0em;
     font-size: 5rem;
     color: blanchedalmond;
     text-shadow: 0rem 0rem 10px black;
+    transform: translateY(-4rem);
 }
 
-h1 span {
+main h1 span {
     display: inline-flex;
     letter-spacing: 0em;
 }
 
-h1 span:nth-child(even) {
+main h1 span:nth-child(even) {
     overflow: hidden;
     letter-spacing: -1em;
     transition: ease-in 0.25s;
 }
 
-h1:hover span:nth-child(even) {
+main h1:hover span:nth-child(even) {
     font-size: 0.75em;
     letter-spacing: 0em;
     transition: ease-out 0.25s;
