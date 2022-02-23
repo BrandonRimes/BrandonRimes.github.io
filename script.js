@@ -225,7 +225,7 @@ const moreInfo = `
 
     <p class='subcat'>Software Development</p>
     <p>
-        I was inspired into developing software as a career when I heard about <a href='https://www.google.com/search?q=automated+reforestation&oq=automated+reforestation&aqs=chrome..69i57j33i160i395l2.7409j1j1&sourceid=chrome&ie=UTF-8'>automated reforestation.</a> The potential to work on planet-positive projects of any scale, from anywhere, really drew me in.
+        I was inspired into developing software as a career when I heard about <a href='https://www.google.com/search?q=automated+reforestation&oq=automated+reforestation&aqs=chrome..69i57j33i160i395l2.7409j1j1&sourceid=chrome&ie=UTF-8' target='_blank'>automated reforestation.</a> The potential to work on planet-positive projects of any scale, from anywhere, really drew me in.
         <br>
         I've also developed a great appreciation for clever and thoughtful user experience design.
     </p>
@@ -293,27 +293,50 @@ const moreInfo = `
 
 // info map ---------------------------------------
 const infoCategories = {
+    "hello": helloInfo,
     "education": educationInfo,
     "experience": experienceInfo,
-    "more": moreInfo,
-    "hello": helloInfo
+    "more": moreInfo
 }
 
+// click in the info options box
 infos.addEventListener("click", (e) => {
     info.innerHTML = infoCategories[e.target.id] ?? infoCategories["hello"];
     info.scrollTo(0,0);
+
+    // selected info styling
+    let unselected = document.querySelector(".selectedInfos");
+    if(unselected) {
+        unselected.classList.remove("selectedInfos");
+    }
+    if(e.target.className.includes("infos")) {
+        e.target.classList.toggle("selectedInfos");
+    }
 });
 
+// click on my photo
 me.addEventListener("click", (e) => {
     info.innerHTML = infoCategories["hello"];
+
+    // remove selected info styling
+    let unselected = document.querySelector(".selectedInfos");
+    if(unselected) {
+        unselected.classList.remove("selectedInfos");
+    }
 });
 
+// click in the header
 mobileHeader.addEventListener("click", (e) => {
     info.innerHTML = infoCategories["hello"];
+
+    // remove selected info styling
+    let unselected = document.querySelector(".selectedInfos");
+    if(unselected) {
+        unselected.classList.remove("selectedInfos");
+    }
 });
 
 // tech logo motion
-
 info.addEventListener("scroll", (e) => {
 
     const techs = [...document.getElementsByClassName("techs")];

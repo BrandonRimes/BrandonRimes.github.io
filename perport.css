@@ -136,6 +136,7 @@ body {
     filter: drop-shadow(-1px -1px 0px var(--copperDark))
         drop-shadow(1px 1px 0px var(--copperLight));
     background-position: center;
+    cursor: pointer;
 }
 
 /* mobile main section (info box) ------------ */
@@ -239,6 +240,7 @@ body {
     background-position: center;
     box-shadow: inset -1px -1px 3px 1px var(--copperDark),
         inset 1px 1px 3px 3px var(--copperLight);
+    cursor: pointer;
 }
 
 /* .infos::before {
@@ -255,9 +257,10 @@ body {
                 2rem -2rem 5px 10px var(--copperLight);
 } */
 
-.infos:hover {
+.infos:hover,
+.selectedInfos {
     background-position: bottom;
-    animation: shadowMotion 1s linear infinite;
+    box-shadow: inset 0px 0px 3px 3px var(--copperLight)
 }
 
 /* .infos:hover::before {
@@ -295,30 +298,8 @@ body {
     }
 } */
 
-@keyframes shadowMotion {
-    0% {
-        box-shadow: -2px -2px 5px 1px var(--copperLight),
-            inset 1px 1px 3px 3px var(--copperLight);
-    }
-    25% {
-        box-shadow: -2px 2px 5px 1px var(--copperLight),
-            inset 1px -1px 3px 3px var(--copperLight);
-    }
-    50% {
-        box-shadow: 2px 2px 5px 1px var(--copperLight),
-            inset -1px -1px 3px 3px var(--copperLight);
-    }
-    75% {
-        box-shadow: 2px -2px 5px 1px var(--copperLight),
-            inset -1px 1px 3px 3px var(--copperLight);
-    }
-    100% {
-        box-shadow: -2px -2px 5px 1px var(--copperLight),
-            inset 1px 1px 3px 3px var(--copperLight);
-    }
-}
-
-#mobile .infos:hover h3 {
+#mobile .infos:hover h3,
+#mobile .selectedInfos h3 {
     filter: drop-shadow(1px 1px 0px var(--copperLight))
     drop-shadow(-1px -1px 0px var(--copperDark));
     background-position: top;
@@ -462,6 +443,7 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
     clip-path: polygon(36% 1%, 55% 1%, 78% 34%, 100% 70%, 100% 100%, 0 100%, 0% 60%, 20% 34%);
+    cursor: pointer;
 }
 
 #mobile-footer {
