@@ -264,7 +264,7 @@ const moreInfo = `
             <p>Vue.js</p>
         </div>
         <div id='tech-django' class='techs'>
-            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-original.svg'>
+            <img class='techLogo' src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg'>
             <p>Django</p>
         </div>
         <div id='tech-mongo' class='techs'>
