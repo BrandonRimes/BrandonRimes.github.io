@@ -67,7 +67,7 @@ const helloInfo = `
         <br>
         Thanks for visiting!
     </p>
-    <p class='closingP'>☕️</p>
+    <p id='closingP'>☕️</p>
 `;
 
 // education info ---------------------------------
@@ -136,7 +136,7 @@ const educationInfo = `
         I am a self-taught musician of many instruments, gardener, and parent.
     </p>
 
-    <p class='closingP'>☕️</p>
+    <p id='closingP'>☕️</p>
 `;
 
 // experience info --------------------------------
@@ -216,7 +216,7 @@ const experienceInfo = `
         <br>- Atlanta Bread Co.
     </p>
 
-    <p class='closingP'>☕️</p>
+    <p id='closingP'>☕️</p>
 `;
 
 // more info --------------------------------------
@@ -288,7 +288,7 @@ const moreInfo = `
     <p class='fineprint'>
         * Tech logos from <a href='https://devicon.dev/'>Devicon</a>
     </p>
-    <p class='closingP'>☕️</p>
+    <p id='closingP'>☕️</p>
 `;
 
 // info map ---------------------------------------
