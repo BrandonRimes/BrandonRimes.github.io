@@ -34,6 +34,7 @@ body {
 #mobile {
     width: 100%;
     height: 100%;
+    max-height: 100vh;
     /* overflow: hidden; */
     position: relative;
 }
@@ -65,23 +66,19 @@ body {
 
 #video {
     position: fixed;
-    height: 80%;
+    height: 80vh;
     width: auto;
     left: 0;
-    top: 11%;
+    top: 10%;
     z-index: -10;
-}
-
-#mobile section {
-    width: 100%;
 }
 
 /* mobile header / footer ------------------------ */
 #mobile-header,
 #mobile-footer {
-    height: 12vh;
+    height: 10%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background-image: url("images/copper.png");
@@ -90,15 +87,35 @@ body {
 
 #mobile-header {
     position: relative;
+    flex-direction: column;
     background-position: bottom;
     box-shadow: inset 0 -2px 2px var(--copperDark),
         inset 0 -5px 5px var(--copperLight);
 }
 
 #mobile-footer {
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
     background-position: center;
     box-shadow: inset 0 2px 2px var(--copperDark),
         inset 0 5px 5px var(--copperLight);
+}
+
+#mobile-footer a {
+    text-decoration: none;
+    height: 100%;
+    width: 33.33%;
+}
+
+.mobile-footer-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 2px 0px var(--copperDark),
+        inset 0 0 3px 2px var(--copperLight);
 }
 
 #mobile-header:hover {
@@ -194,8 +211,10 @@ body {
 
 #mobile-main {
     position: relative;
-    height: 78%;
+    height: 80%;
+    min-height: 80%;
     padding: 1rem;
+    padding-bottom: 0;
     line-height: 1.25rem;
     display: flex;
     flex-direction: column;
@@ -454,28 +473,6 @@ em {
     clip-path: polygon(40% 0%, 60% 0%, 75% 35%, 90% 50%, 90% 100%, 10% 100%, 10% 50%, 25% 35%);
     cursor: pointer;
     z-index: 10;
-}
-
-#mobile-footer {
-    height: 10%;
-    width: 100%;
-    flex-direction: row;
-}
-
-#mobile-footer a {
-    text-decoration: none;
-    height: 100%;
-    width: 33.33%;
-}
-
-.mobile-footer-links {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 0 0 2px 0px var(--copperDark),
-        inset 0 0 3px 2px var(--copperLight);
 }
 
 #desktopViewCloseBtn {
