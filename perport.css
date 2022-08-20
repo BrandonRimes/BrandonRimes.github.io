@@ -65,7 +65,7 @@ body {
 
 #video {
     position: fixed;
-    height: 80vh;
+    height: 80%;
     width: auto;
     left: 0;
     top: 11%;
@@ -79,7 +79,7 @@ body {
 /* mobile header / footer ------------------------ */
 #mobile-header,
 #mobile-footer {
-    height: 12%;
+    height: 12vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
