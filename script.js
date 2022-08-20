@@ -58,10 +58,10 @@ const me = document.getElementById("me");
 // hello info -------------------------------------
 const helloInfo = `
     <h5>Hello</h5>
-    <p>
+    <p class='paragraph'>
         Welcome to my bio page.
         <br>
-        I've arranged the info into the categories below.
+        Read about me in the categories below.
         <br>
         See my code on GitHub, view my resume on LinkedIn, and connect with me via email.
         <br>
@@ -75,7 +75,7 @@ const educationInfo = `
     <h5>Education</h5>
 
     <h4>PDX Code Guild</h4>
-    <p>
+    <p class='paragraph'>
         Immersive, full-stack web development bootcamp.
         <br>
         Python, JavaScript, HTML5 / CSS3, Vue.js, DjangoREST
@@ -85,7 +85,7 @@ const educationInfo = `
     <img id='pdx-cert' src='images/cert.png'>
 
     <h4>Code Fellows</h4>
-    <p>
+    <p class='paragraph'>
         Intensive, full-stack web development bootcamp.
         <br>
         JavaScript, HTML5 / CSS3, React.js, Node.js, MongoDB, Express.
@@ -98,14 +98,14 @@ const educationInfo = `
     </p>
 
     <h4>Florida School of Massage</h4>
-    <p>
+    <p class='paragraph'>
         Therapeutic massage training focused on awareness and communication
         <br>
         - 2018
     </p>
 
     <h4>NNPTC</h4>
-    <p>
+    <p class='paragraph'>
         Naval Nuclear Power Training Command
         <br>
         Where the US Navy trains nuclear propulsion engineers.
@@ -116,21 +116,21 @@ const educationInfo = `
     </p>
 
     <h4>Embry Riddle</h4>
-    <p>
+    <p class='paragraph'>
         Aeronautical University
         <br>
-        I studied aeronautical science and logged flight hours in pilot training. After a successful year, I left to join the US Navy in pursuit of more intensive, debt-free training.
+        I studied aeronautical science and logged flight hours in pilot training. After a successful year, I left to join the US Navy in pursuit of more intensive, debt-free pilot training.
         <br>
         - 2009
     </p>
 
     <h4>Jupiter High School</h4>
-    <p>
+    <p class='paragraph'>
         Class of 2009
     </p>
     
     <h4>Autodidactically</h4>
-    <p>
+    <p class='paragraph'>
         I continually advance and expand my professional and recreational skills through technical books and online resources, such as Lynda.com, LinkedIn Learning, and Code Academy.
         <br>
         I am a self-taught musician of many instruments, gardener, and parent.
@@ -152,12 +152,12 @@ const experienceInfo = `
         Landing page for a Super Smash Bros. league.
     </p>
     <img src='images/smash.png'>
-    <p>
+    <p class='paragraph'>
         The client wanted an interactive design with eye-catching relevance to potential game league members. With much creative liberty and frequent, thoughtful communication, we designed, planned, and executed this Switch controller emulation.
     </p>
 
     <h4>Tutoring</h4>
-    <p>
+    <p class='paragraph'>
         I help fellow developers learn, write, and debug CSS and JavaScript via Discord and Miro.
     </p>
 
@@ -167,7 +167,7 @@ const experienceInfo = `
     <p>
         Self employed, Licensed Massage Therapist.
     </p>
-    <p>
+    <p class='paragraph'>
         Utilizing professional communication training to achieve clients' wellness goals. I practiced various modalities, primarily treating injury recovery. I organized advertising, media, scheduling, treatment plans, client notes, locations, and payments.
     </p>
     <p>
@@ -178,7 +178,7 @@ const experienceInfo = `
     <p>
         Cable Tech, Solutions Architect
     </p>
-    <p>
+    <p class='paragraph'>
         Residential cable internet and tv installation and repair. From whole house wiring, equipment installation, and networking from scratch, to legacy system/equipment troubleshooting. I was the one to call for the most abstract problems, and often heard from clients "You're the nth tech to come here and the first one to fix it!"
         <br>
         I trained new techs in the field and constructed training aids for the shop.
@@ -194,7 +194,7 @@ const experienceInfo = `
     <p>
         E5 - CVN74
     </p>
-    <p>
+    <p class='paragraph'>
         Operated, maintained, and repaired machinery and equipment in propulsion plant spaces. Maintenance procedure oversight, extensive use of tools, log keeping, damage control.
     </p>
     <p>
@@ -202,7 +202,7 @@ const experienceInfo = `
     </p>
 
     <h4>Other</h4>
-    <p>
+    <p class='paragraph'>
         I have held various positions in food service and retail while in schools and other transitional periods;
         <br>- Ampersand Graphics: Screen Printing
         <br>- Fruits & Roots Vegan Cafe: Prep/Line Cook
@@ -224,7 +224,7 @@ const moreInfo = `
     <h5>More!</h5>
 
     <p class='subcat'>Software Development</p>
-    <p>
+    <p class='paragraph'>
         I was inspired into developing software as a career when I heard about <a href='https://www.google.com/search?q=automated+reforestation&oq=automated+reforestation&aqs=chrome..69i57j33i160i395l2.7409j1j1&sourceid=chrome&ie=UTF-8' target='_blank'>automated reforestation.</a> The potential to work on planet-positive projects of any scale, from anywhere, really drew me in.
         <br>
         I've also developed a great appreciation for clever and thoughtful user experience design.
@@ -277,14 +277,30 @@ const moreInfo = `
         </div>
     </div>
 
-    <p class='subcat'>Background</p>
-    <p>
-        I was born in Jupiter, FL 31 years ago under a Scorpio sun, and currently reside in Stuart, FL. My insatiable thirst for knowledge and ‘hit the ground running’ attitude enable me to learn with agility and eloquence. My brain is entertained by intricate puzzles and problems, with a flair for clever design and organic beauty.
+    <p class='subcat'>Professional Journey</p>
+    <p class='paragraph'>
+        I was born in Jupiter, FL. Out of highschool, I attended <em>Embry Riddle Aeronautical University</em>. I studied aeronautical science and logged flight hours in a Cessna 172. My goal was to fly commercial planes internationally, or search and rescue helicopters. After a successful year at ERAU, I looked instead towards a military career path, in favor of the superior, debt-free training.
     </p>
-    <p>
+    <p class='paragraph'>
+        The Navy has the most pilot positions of any branch. Navy pilots are officers. Officers come from Officer Candidate School, for which a degree is required, or through various enlisted-to-officer opportunities. I enlisted as a Nuclear Machinists Mate, under pretense of it fast-tracking the enlisted->officer->pilot path.
+    </p>
+    <p class='paragraph'>
+        At <em>Naval Nuclear Power Training Command</em>, I studied the science and engineering of designing, operating, and maintaining naval nuclear propulsion plants. The program is widely acknowledged as having the most demanding academic program in the U.S. military.
+        Topics include Thermodynamics, Nuclear Physics, Chemistry, Material Science and Metallurgy, Electrical Power Theory, and Mathematics.
+        <br>
+        I grew exponentially in knowledge and experience there and in my station on an aircraft carrier.
+    </p>
+    <p class='paragraph'>
+        The Nuclear rating, as it turns out, is one of very few ratings that can not be transferred out of. I could commission as an officer, but only in the nuclear field, and there are no nuclear-powered aircraft.
+        <br>
+        A career in civilian power plant engineering was not what I wanted for my life. I kept my Sailor days brief and reevaluated my goals post-Navy.
+    </p>
+    <p class='paragraph'>
+        I took a job as a Cable Tech whilst I explored where to apply my GI Bill.
+    </p>
+    <p class='paragraph'>
         I enjoy being immersed in nature, parenting, gardening, playing various musical instruments, creating ornate objects (furniture, art, tools, etc.), traveling, learning, teaching, connecting with and helping people, and sharing these things with my fellow humans.
     </p>
-
     <p class='fineprint'>
         * Tech logos from <a href='https://devicon.dev/'>Devicon</a>
     </p>
