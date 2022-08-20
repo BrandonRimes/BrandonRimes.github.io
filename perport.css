@@ -26,14 +26,14 @@ Composer: Brandon Rimes */
 
 body {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     font-family: averia serif libre;
     /* overflow: hidden; */
 }
 
 #mobile {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     /* overflow: hidden; */
     position: relative;
 }
