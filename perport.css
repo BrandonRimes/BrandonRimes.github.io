@@ -26,7 +26,7 @@ Composer: Brandon Rimes */
 
 body {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     min-height: 100vh;
     font-family: averia serif libre;
     /* overflow: hidden; */
@@ -67,17 +67,18 @@ body {
 
 #video {
     position: fixed;
-    height: 80vh;
+    height: 80%;
     width: auto;
     left: 0;
-    top: 10vh;
+    top: 10%;
     z-index: -10;
 }
 
 /* mobile header / footer ------------------------ */
 #mobile-header,
 #mobile-footer {
-    height: 10vh;
+    position: fixed;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -87,7 +88,8 @@ body {
 }
 
 #mobile-header {
-    position: relative;
+    /* position: relative; */
+    top: 0;
     flex-direction: column;
     background-position: bottom;
     box-shadow: inset 0 -2px 2px var(--copperDark),
@@ -95,12 +97,40 @@ body {
 }
 
 #mobile-footer {
-    /* position: fixed;
-    bottom: 0; */
+    /* position: fixed; */
+    bottom: 0;
     flex-direction: row;
     background-position: center;
     box-shadow: inset 0 2px 2px var(--copperDark),
         inset 0 5px 5px var(--copperLight);
+}
+
+#mobile-main {
+    position: fixed;
+    top: 10vh;
+    height: 80%;
+    min-height: 80vh;
+    padding: 1rem 1rem 0 1rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#info {
+    background-color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    height: 66%;
+    max-height: 66%;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: inset 0 0 10px 2px black,
+        inset 0 0 5px 10px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #mobile-footer a {
@@ -208,32 +238,6 @@ body {
 
 .paragraph {
     text-indent: 1rem;
-}
-
-#mobile-main {
-    position: relative;
-    height: 80%;
-    min-height: 80vh;
-    padding: 1rem 1rem 0 1rem;
-    line-height: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#info {
-    background-color: rgba(255, 255, 255, 0.75);
-    position: relative;
-    height: 66%;
-    border-radius: 1rem;
-    padding: 1rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    box-shadow: inset 0 0 10px 2px black,
-        inset 0 0 5px 10px white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 em {
