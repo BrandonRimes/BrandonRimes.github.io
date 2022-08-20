@@ -2,14 +2,6 @@
 Personal Portfolio
 Composer: Brandon Rimes */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     --shadow: inset -1px -1px 2px black,
         inset 2px 2px 5px white,
@@ -22,11 +14,19 @@ Composer: Brandon Rimes */
     --copperDark: rgba(0, 0, 0, 0.75);
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* mobile view -------------------------------- */
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     font-family: averia serif libre;
     overflow: hidden;
 }

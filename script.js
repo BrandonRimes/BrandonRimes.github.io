@@ -145,6 +145,17 @@ const experienceInfo = `
     
     <p class='subcat'>Freelance Projects</p>
 
+    <a href='https://genuine-kelpie.netlify.app/'>
+        <h4>The Touch Of Presence</h4>
+    </a>
+    <p>
+        Business site for a Massage Therapist
+    </p>
+    <img src='images/touchofpresence-screenshot.png'>
+    <p class='paragraph'>
+        This client had an existing Squarespace site and wanted something new from scratch. Given a color scheme and logo, along with three guiding principles; Simple, elegant, and interactive; we brought her vision to fruition.
+    </p>
+
     <a href='https://877-smash-now.netlify.app/'>
         <h4>877 Smash Now</h4>
     </a>
