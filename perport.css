@@ -28,13 +28,13 @@ body {
     width: 100vw;
     height: 100%;
     font-family: averia serif libre;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #mobile {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
