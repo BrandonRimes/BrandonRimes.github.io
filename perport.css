@@ -24,9 +24,13 @@ Composer: Brandon Rimes */
 
 /* mobile view -------------------------------- */
 
+html {
+    height: 100vh;
+}
+
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: averia serif libre;
     /* overflow: hidden; */
 }
@@ -260,7 +264,7 @@ em {
 .infos {
     position: relative;
     width: 9rem;
-    height: 2rem;
+    height: 2.5rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -271,6 +275,10 @@ em {
     box-shadow: inset -1px -1px 3px 1px var(--copperDark),
         inset 1px 1px 3px 3px var(--copperLight);
     cursor: pointer;
+}
+
+.infos h3 {
+    font-size: 1.25rem;
 }
 
 /* .infos::before {
