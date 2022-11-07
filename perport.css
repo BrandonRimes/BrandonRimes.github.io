@@ -1027,7 +1027,7 @@ main {
 
 /* book end --------------------------- */
 
-#puppub {
+/* #puppub {
     height: 14vh;
     width: 8vh;
     bottom: 16vh;
@@ -1037,9 +1037,9 @@ main {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
+} */
 
-#puppub:hover {
+/* #puppub:hover {
     animation: hydrant 0.5s linear infinite;
 }
 
@@ -1062,10 +1062,10 @@ main {
     100% {
         transform: rotate(0deg) translateZ(5vh);
     }
-}
+} */
 
 /* savor ------------------------------ */
-#savor {
+/* #savor {
     height: 13vh;
     width: 13vh;
     bottom: 16vh;
@@ -1074,15 +1074,14 @@ main {
 
 #savor-bouy {
     height: 100%;
-}
+} */
 
-#savor-coin {
+/* #savor-coin {
     position: absolute;
     height: 50%;
     width: 50%;
     top: 25%;
     left: 25%;
-    /* transform: translateX(-50%) translateY(-50%); */
     color: #ffbd0b;
     background-color: #ffbd0b;
     border-top: 4px solid #ffd84c;
@@ -1096,9 +1095,9 @@ main {
     text-shadow: 1px 2px 0 #cb7407;
     padding-top: 5%;
     transition: all 0.2s ease-in-out;
-}
+} */
 
-#savor-coin::after {
+/* #savor-coin::after {
     content: '';
     position: absolute;
     width: 80%;
@@ -1113,33 +1112,33 @@ main {
     border-left: 4px solid #d57e08;
     border-top: 4px solid #d57e08;
     transition: all 0.2s ease-in-out
-}
+} */
 
-#savor:hover {
+/* #savor:hover {
     animation: savor 0.5s ease-in-out infinite alternate;
 }
 
 #savor:hover #savor-coin {
     animation: savorotate 1.2s linear infinite;
-}
+} */
 
-@keyframes savor {
+/* @keyframes savor {
     0% {
         transform: translateY(0%);
     }
     100% {
         transform: translateY(-5%);
     }
-}
+} */
 
-@keyframes savorotate {
+/* @keyframes savorotate {
     0% {
         transform: rotateY(0deg);
     }
     100% {
         transform: rotateY(360deg);
     }
-}
+} */
 
 /* keys -------------------------------------*/
 #keys {
@@ -1244,6 +1243,40 @@ main {
     100% {
         transform: rotateX(0deg) translateZ(3rem) translateY(-1vh) rotate(0deg);
     }
+}
+
+/* touch of presence ----------------------------- */
+#tofp {
+    height: 50vh;
+    width: 20vh;
+    bottom: 0vh;
+    left: 4vh;
+    transform: translateZ(15rem);
+}
+
+.tofp {
+    position: absolute;
+}
+
+/* #tofp-logo {
+    height: 100%;
+    width: 100%;
+    bottom: -11rem;
+    left: 0rem;
+    background-image: url("images/ToPlogo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotateX(80deg) rotateY(5deg) translateY(1rem);
+} */
+
+#tofp-lady {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://ucarecdn.com/82d13c71-7365-4631-b26f-5dac54e75f4e/-/preview/-/quality/smart/-/format/auto/");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* logo ---------------------------------------------- */
